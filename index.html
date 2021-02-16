@@ -5,68 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODK | Продаж покрівельних матеріалів (металочерепиця, профнастил, керамічна черепиця, бітумна черепиця) металопластикових/алюмінієвих вікон та дверей, жалюзі та ролети</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <img src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
-        <ul>
-            <li><a href="#">ODK</a></li>
-            <li><a href="#services">Каталог</a></li>
-            <li><a href="#about-us">Про нас</a></li>
-            <li><a href="#our-facilities">Наші об'єкти</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-            <li><a href="cooperation">Співпраця</a></li>
-        </ul>
-        <a href="tel:+380506114689">+38 050-611-46-89</a>
+        <div class="background-container">
+            <div class="wrapper">
+                <div class="navigation-container">
+                    <a href="#">
+                        <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
+                    </a>
+                    <nav class="header-navigation">
+                        <ul class="header-navigation__list">
+                            <li><a class="header-navigation__item" href="#">ODK</a></li>
+                            <li><a class="header-navigation__item" href="#services">Каталог</a></li>
+                            <li><a class="header-navigation__item" href="#about-us">Про нас</a></li>
+                            <li><a class="header-navigation__item" href="#our-facilities">Наші об'єкти</a></li>
+                            <li><a class="header-navigation__item" href="#contacts">Контакти</a></li>
+                            <li><a class="header-navigation__item" href="cooperation">Співпраця</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a class="header-navigation__phone" href="tel:+380506114689">+38 050-611-46-89</a>
+            </div>
+        </div>
     </header>
     <main>
         <h1 class="visually-hidden">ODK магазин покрівельних матеріалів, металопластикових/алюмінієвих вікон та дверей, жалюзів та ролетів</h1>
-        <section class="carousel">
-            <h2 class="visually-hidden">Топ пропозиції</h2>
-            <ul>
-                <li>
-                    <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
-                    <h2>Металочерепиця</h2>
-                    <div>
-                        <span>Гарантія</span>
-                        <span>до 50 років</span>
-                        <span>Товщина металу</span>
-                        <span>від 0,4 до 0,5 мм</span>
-                        <span>Ціна</span>
-                        <span>від 140 грн/м<sup>2</sup></span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
-                    <h2>Металопластикові конструкції</h2>
-                    <div>
-                        <span>Гарантія</span>
-                        <span>до 15 років</span>
-                        <span>Кількість камер</span>
-                        <span>від 3 до 9</span>
-                        <span>Товщина склопакету</span>
-                        <span>від 24 до 54 мм</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./img/blinds.png" alt="Ролети день-ніч">
-                    <h2>Системи день-ніч</h2>
-                    <div>
-                        <span>Гарантія</span>
-                        <span>до 3 років</span>
-                        <span>Затемнення</span>
-                        <span>до 90%</span>
-                        <span>Ціна</span>
-                        <span>від 487 грн/м<sup>2</sup></span>
-                    </div>
-                </li>
-            </ul>
-            <div>
-                <input type="radio" name="" id="">
-                <input type="radio" name="" id="">
-                <input type="radio" name="" id="">
-            </div>
-        </section>
+        <div class="carousel-container">
+            <section class="carousel wrapper">
+                <h2 class="visually-hidden">Топ пропозиції</h2>
+                <ul>
+                    <li>
+                        <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
+                        <h2>Металочерепиця</h2>
+                        <div>
+                            <span>Гарантія</span>
+                            <span>до 50 років</span>
+                            <span>Товщина металу</span>
+                            <span>від 0,4 до 0,5 мм</span>
+                            <span>Ціна</span>
+                            <span>від 140 грн/м<sup>2</sup></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
+                        <h2>Металопластикові конструкції</h2>
+                        <div>
+                            <span>Гарантія</span>
+                            <span>до 15 років</span>
+                            <span>Кількість камер</span>
+                            <span>від 3 до 9</span>
+                            <span>Товщина склопакету</span>
+                            <span>від 24 до 54 мм</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/blinds.png" alt="Ролети день-ніч">
+                        <h2>Системи день-ніч</h2>
+                        <div>
+                            <span>Гарантія</span>
+                            <span>до 3 років</span>
+                            <span>Затемнення</span>
+                            <span>до 90%</span>
+                            <span>Ціна</span>
+                            <span>від 487 грн/м<sup>2</sup></span>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                </div>
+            </section>
+        </div>
         <section id="services">
             <h2 class="visually-hidden">Каталог продукції</h2>
             <ul>
@@ -256,7 +269,7 @@
         </section>
     </main>
     <footer>
-        <img src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
+        <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
         <a href="">Політика конфіденційності</a>
         <a href="tel:+"></a>
         <a href="mailto:"></a>
