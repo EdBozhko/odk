@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="background-container">
-            <div class="wrapper">
+            <div class="header wrapper">
                 <div class="navigation-container">
                     <a href="#">
                         <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
@@ -29,58 +29,98 @@
                 <a class="header-navigation__phone" href="tel:+380506114689">+38 050-611-46-89</a>
             </div>
         </div>
+        <div class="service-panel">
+            <div class="wrapper">
+                <a class="service-panel__item service-panel__item--callback" href="#">Передзвоніть<br>мені</a>
+                <a class="service-panel__item service-panel__item--calculation" href="#">Замовити безкоштовний<br>замір та прорахунок</a>
+                <a class="service-panel__item service-panel__item--download-catalog" href="#">Завантажити<br>каталог</a>
+            </div>
+        </div>
     </header>
     <main>
         <h1 class="visually-hidden">ODK магазин покрівельних матеріалів, металопластикових/алюмінієвих вікон та дверей, жалюзів та ролетів</h1>
         <div class="carousel-container">
             <section class="carousel wrapper">
                 <h2 class="visually-hidden">Топ пропозиції</h2>
-                <ul>
-                    <li>
-                        <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
-                        <h2>Металочерепиця</h2>
-                        <div>
-                            <span>Гарантія</span>
-                            <span>до 50 років</span>
-                            <span>Товщина металу</span>
-                            <span>від 0,4 до 0,5 мм</span>
-                            <span>Ціна</span>
-                            <span>від 140 грн/м<sup>2</sup></span>
+                <ul class="top-slide-holder">
+                    <li class="top-slides visually-hidden">
+                        <div class="top-slides__image">
+                            <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
+                        </div>
+                        <div class="top-slides__description">
+                            <h2 class="top-slides__title">Металочерепиця</h2>
+                            <div class="top-slides__table">
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Гарантія</span>
+                                    <span class="top-slides__table-data--right">до 50 років</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Товщина металу</span>
+                                    <span class="top-slides__table-data--right">від 0,4 до 0,5 мм</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Ціна</span>
+                                    <span class="top-slides__table-data--right">від 140 грн/м<sup>2</sup></span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
-                        <h2>Металопластикові конструкції</h2>
-                        <div>
-                            <span>Гарантія</span>
-                            <span>до 15 років</span>
-                            <span>Кількість камер</span>
-                            <span>від 3 до 9</span>
-                            <span>Товщина склопакету</span>
-                            <span>від 24 до 54 мм</span>
+                    <li class="top-slides visually-hidden">
+                        <div class="top-slides__image">
+                            <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
+                        </div>
+                        <div class="top-slides__description">
+                            <h2 class="top-slides__title">Металопластикові конструкції</h2>
+                            <div class="top-slides__table">
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Гарантія</span>
+                                    <span class="top-slides__table-data--right">до 15 років</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Кількість камер</span>
+                                    <span class="top-slides__table-data--right">від 3 до 9</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Товщина склопакету</span>
+                                    <span class="top-slides__table-data--right">від 24 до 54 мм<sup>2</sup></span>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <img src="./img/blinds.png" alt="Ролети день-ніч">
-                        <h2>Системи день-ніч</h2>
-                        <div>
-                            <span>Гарантія</span>
-                            <span>до 3 років</span>
-                            <span>Затемнення</span>
-                            <span>до 90%</span>
-                            <span>Ціна</span>
-                            <span>від 487 грн/м<sup>2</sup></span>
+                    <li class="top-slides">
+                        <div class="top-slides__image">
+                            <img src="./img/blinds.png" alt="Ролети день-ніч">
+                        </div>
+                        <div class="top-slides__description">
+                            <h2 class="top-slides__title">Системи<br>день - ніч</h2>
+                            <div class="top-slides__table">
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Гарантія</span>
+                                    <span class="top-slides__table-data--right">до 3 років</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Затемнення</span>
+                                    <span class="top-slides__table-data--right">до 90%</span>
+                                </div>
+                                <div class="top-slides__table-row">
+                                    <span class="top-slides__table-data--left">Ціна</span>
+                                    <span class="top-slides__table-data--right">від 487 грн/м<sup>2</sup></span>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <div>
-                    <input type="radio" name="" id="">
-                    <input type="radio" name="" id="">
-                    <input type="radio" name="" id="">
+                <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
+                <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
+                <input class="visually-hidden" type="radio" id="slide-3" name="toggle">
+                <div class="carousel__pagination-list">
+                    <label for="slide-1">Первый слайд</label>
+                    <label for="slide-2">Второй слайд</label>
+                    <label for="slide-3">Третий слайд</label>
                 </div>
             </section>
         </div>
-        <section id="services">
+        <section class="services">
             <h2 class="visually-hidden">Каталог продукції</h2>
             <ul>
                 <li>
@@ -267,6 +307,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466.2744943930528!2d22.29957222058875!3d48.616602679908276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b2abd31343%3A0x692b297a0b03192!2z0JzQkNCT0JDQl9CY0J0gIk9ESyI!5e0!3m2!1sru!2sua!4v1613485011686!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </section>
+
     </main>
     <footer>
         <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
