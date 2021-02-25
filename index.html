@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODK | Продаж покрівельних матеріалів (металочерепиця, профнастил, керамічна черепиця, бітумна черепиця) металопластикових/алюмінієвих вікон та дверей, жалюзі та ролети</title>
+    <link rel="icon" type="image/png" href="./favicon.png"> 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fotorama.dev.css">
 </head>
 <body>
-    <header>
+    <header id="odk">
         <div class="background-container">
             <div class="header wrapper">
                 <div class="navigation-container">
@@ -17,12 +19,12 @@
                     </a>
                     <nav class="header-navigation">
                         <ul class="header-navigation__list">
-                            <li><a class="header-navigation__item" href="#">ODK</a></li>
+                            <li><a class="header-navigation__item" href="#odk">ODK</a></li>
                             <li><a class="header-navigation__item" href="#services">Каталог</a></li>
                             <li><a class="header-navigation__item" href="#about-us">Про нас</a></li>
                             <li><a class="header-navigation__item" href="#our-facilities">Наші об'єкти</a></li>
-                            <li><a class="header-navigation__item" href="#contacts">Контакти</a></li>
-                            <li><a class="header-navigation__item" href="cooperation">Співпраця</a></li>
+                            <li><a class="header-navigation__item" href="#our-team">Контакти</a></li>
+                            <li><a class="header-navigation__item" href="./inner-pages/cooperation.html">Співпраця</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -39,11 +41,10 @@
     </header>
     <main>
         <h1 class="visually-hidden">ODK магазин покрівельних матеріалів, металопластикових/алюмінієвих вікон та дверей, жалюзів та ролетів</h1>
-        <div class="carousel-container">
-            <section class="carousel wrapper">
-                <h2 class="visually-hidden">Топ пропозиції</h2>
-                <ul class="top-slide-holder">
-                    <li class="top-slides visually-hidden">
+        <section class="carousel">
+            <div class="wrapper">
+                <div class="fotorama" data-width="100%" data-height="500px" data-loop="true" data-autoplay="3000" data-stopautoplayontouch="false" data-keyboard="true">
+                    <div class="top-slides">
                         <div class="top-slides__image">
                             <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
                         </div>
@@ -64,8 +65,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="top-slides visually-hidden">
+                    </div>
+                    <div class="top-slides">
                         <div class="top-slides__image">
                             <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
                         </div>
@@ -86,8 +87,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="top-slides">
+                    </div>
+                    <div class="top-slides">
                         <div class="top-slides__image">
                             <img src="./img/blinds.png" alt="Ролети день-ніч">
                         </div>
@@ -108,215 +109,358 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-                <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
-                <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
-                <input class="visually-hidden" type="radio" id="slide-3" name="toggle">
-                <div class="carousel__pagination-list">
-                    <label for="slide-1">Первый слайд</label>
-                    <label for="slide-2">Второй слайд</label>
-                    <label for="slide-3">Третий слайд</label>
+                    </div>
                 </div>
-            </section>
-        </div>
-        <section class="services">
+            </div>
+        </section>   
+        <section class="services wrapper" id="services">
             <h2 class="visually-hidden">Каталог продукції</h2>
-            <ul>
+            <ul class="services-list">
                 <li>
                     <h3>
-                        <a href="roofing_materials">Покрівельні матеріали</a>                        
+                        <a class="services-list__item services-list__item--roofing-materials" href="./inner-pages/services/roofing-materials.html">Покрівельні матеріали</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a href="accessories">Аксесуари</a>                        
+                        <a class="services-list__item services-list__item--accessories" href="accessories">Аксесуари</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a href="gutter_system">Водостічні системи</a>                        
+                        <a class="services-list__item services-list__item--gutter-system" href="gutter-system">Водостічні системи</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a href="windows_and_doors">Вікна та двері</a>                        
+                        <a class="services-list__item services-list__item--windows-and-doors" href="windows-and-doors">Вікна та двері</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a href="sps">Сонцезахисні системи</a>                        
+                        <a class="services-list__item services-list__item--sps" href="sps">Сонцезахисні системи</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a href="garage_doors">Гаражні воррота</a>                        
+                        <a class="services-list__item services-list__item--garage-doors" href="garage-doors">Гаражні ворота</a>                        
                     </h3>
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Про нас у цифрах</h2>
-            <p><em>13</em> років у сфері</p>
-            <p>Продано більше <em>100 000 м<sup>2</sup></em> покрівельних матеріалів</p>
-            <p>Більше <em>5000</em> успішних угод</p>
-            <p><em>Гарантуємо</em>високу якість, професійний підхід, безкоштовний замір та розрахунок</p>
+        <section class="about-us" id="about-us">
+            <div class="about-us-container wrapper">
+                <h2 class="about-us__title">Про нас у цифрах</h2>
+                <p class="about-us__advantages about-us__advantages--protection"><em>13</em> років у сфері</p>
+                <p class="about-us__advantages about-us__advantages--ventas">Продано більше <em>100 000 м<sup>2</sup></em> покрівельних матеріалів</p>
+                <p class="about-us__advantages about-us__advantages--handshake">Більше <em>5000</em> успішних угод</p>
+                <p class="about-us__advantages about-us__advantages--checklist"><em>Гарантуємо</em> високу якість, професійний підхід, безкоштовний замір та розрахунок</p>
+            </div>
         </section>
-        <section>
-            <h2>Наші об'єкти</h2>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <section class="our-facilities wrapper" id="our-facilities">
+            <h2 class="our-facilities__title">Наші об'єкти</h2>
+            <div class="center slider">
+                <div class="slide-box">
+                    <img src="./img/works-1.jpg">
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
+                <div class="slide-box">
+                    <img src="./img/works-2.jpg">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-        <section>
-            <h2>Що про нас думають</h2>
-            <a href="#">Залишити відгук</a>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <div class="slide-box">
+                    <img src="./img/works-3.jpg">
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </section>
-        <section>
-            <h2>Акції, новини, статті</h2>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                </a>
-            </div>
-        </section>
-        <section>
-            <h2>Наша команда</h2>
-            <div>
-                <img src="" alt="">
-                <span></span>
-                <span></span>
-                <a href="tel:+"></a>
-            </div>
-            <div>
-                <img src="" alt="">
-                <span></span>
-                <span></span>
-                <a href="tel:+"></a>
-            </div><div>
-                <img src="" alt="">
-                <span></span>
-                <span></span>
-                <a href="tel:+"></a>
-            </div>
-            <svg><rect width="400" height="3" fill="#89c2f0"/></svg>
-        </section>
-        <section>
-            <div>
-                <a href="https://www.google.com.ua/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6055472,22.3189657,14z/data=!4m5!3m4!1s0x0:0x692b297a0b03192!8m2!3d48.6166262!4d22.2997999?hl=ru">
-                    <span>Адреса:</span>
-                    <span>м.Ужгород,<br>вул.Мукачівска 28</span>
-                </a>
-                <div>
-                    <span>Графік роботи:</span>
-                    <span>
-                        Пн-Пт: 9.00-18.00<br>
-                        Сб: 10.00-15.00<br>
-                        Нд - вихідний
+        <section class="reviews wrapper">
+            <h2 class="reviews__title">Що про нас думають</h2>
+            <a class="reviews__button" href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Залишити відгук</a>
+            <div class="center slider reviews-slider">
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-1.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Купувала в цiй компанii металочерепицю п'ть рокiв назад,якiстю задоволена.Тепер придбала вiкна по гарнiй цiнi.Рекомендую всiм.</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Тетяна Барабаш</a>
                     </span>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466.2744943930528!2d22.29957222058875!3d48.616602679908276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b2abd31343%3A0x692b297a0b03192!2z0JzQkNCT0JDQl9CY0J0gIk9ESyI!5e0!3m2!1sru!2sua!4v1613485011686!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-2.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">надежные партнеры.рекомендую!</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Светлана Ладанюк</a>
+                    </span>
+                </div>
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-3.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Замовляв вікна в ODK. Отримав якісний результат в короткі терміни! Крута робота, дякую команді!👍🏼</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Дмитрий Винцерский</a>
+                    </span>
+                </div>
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-4.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Придбав вікна в ОДК, виконали все оперативно та якісно. Дуже задоволений роботою менеджерів, рекомендую всім👍</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Леонид Пастухов</a>
+                    </span>
+                </div>
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-5.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Гарний магазин! Мені сподобалось! Привітні працівники, кваліфіковано та зарозуміло для мене розповіли чим можна перекрити дах, які вікна можна собі поставити. Замовив в них ролети та думаю в осені прийду до них за металочерепицею. Рекомендую 👍</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Maxim Dobritskii</a>
+                    </span>
+                </div>
+                <div class="slide-box reviews-card">
+                    <img class="reviews__avatar" src="./img/reviews-6.png" alt="Фото з аватар">
+                    <p class="reviews__description">
+                        <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Хороший асортимент, нормальні ціни, адекватні продавці</a>
+                    </p>
+                    <span class="reviews__signature">
+                        <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Эдуард Божко</a>
+                    </span>
+                </div>
             </div>
         </section>
-
+        <section class="news">
+            <div class="news-container wrapper">
+                <h2 class="news__title">Акції, новини, статті</h2>
+                <div class="news__list">
+                    <div class="news__colomn-left">
+                        <a class="news__data-left" href="#">
+                            <img src="./img/news-1.jpg" alt="Новинка «Металочерепиця 
+                            Madera та Venera» Акція «За
+                            кожні 100 кв.м. даху – 
+                            супердифузійна плівка в 
+                            подарунок»">
+                            <div class="news__news-title-left">
+                                <span>04.07.2019</span>
+                                <h3>Новинка «Металочерепиця 
+                                    Madera та Venera» Акція «За
+                                    кожні 100 кв.м. даху – 
+                                    супердифузійна плівка в 
+                                    подарунок»
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news__colomn-right">
+                        <a class="news__data-right" href="#">
+                            <img src="./img/news-2.jpg" alt="Акція «Придбай 
+                            сонцезахисні системи 
+                            – отримай монтаж у
+                            подарунок»">
+                            <div class="news__news-title-right">
+                                <span>04.07.2019</span>
+                                <h3>Акція «Придбай 
+                                    сонцезахисні системи 
+                                    – отримай монтаж у
+                                    подарунок»
+                                </h3>
+                            </div>
+                        </a>
+                        <a class="news__data-right" href="#">
+                            <img src="./img/news-3.jpg" alt="Акція «Обери 
+                            подарунок при купівлі 
+                            віконних систем»">
+                            <div class="news__news-title-right">
+                                <span>04.07.2019</span>
+                                <h3>Акція «Обери 
+                                    подарунок при купівлі 
+                                    віконних систем»
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-team wrapper" id="our-team">
+            <h2 class="our-team__title">Наша команда</h2>
+            <div class="our-team__container">
+                <div class="our-team__manager-card">
+                    <img src="./img/manager-1.jpg" alt="Фото Дьопйош Юрій">
+                    <span class="our-team__manager-name">Дьопйош Юрій</span>
+                    <span class="our-team__manager-department">Власник</span>
+                    <a class="our-team__manager-telephone" href="tel:+380506114689">+38 050-611-46-89</a>
+                </div>
+                <div class="our-team__manager-card">
+                    <img src="./img/manager-2.jpg" alt="Фото Василь">
+                    <span class="our-team__manager-name">Василь</span>
+                    <span class="our-team__manager-department">Покрівельний відділ</span>
+                    <a class="our-team__manager-telephone" href="tel:+38 050-111-11-11">+38 050-111-11-11</a>
+                </div>
+                <div class="our-team__manager-card">
+                    <img src="./img/manager-3.jpg" alt="Фото Руслана">
+                    <span class="our-team__manager-name">Руслана</span>
+                    <span class="our-team__manager-department">Віконний відділ</span>
+                    <a class="our-team__manager-telephone" href="tel:+38 050-222-22-22">+38 050-222-22-22</a>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contacts__container wrapper">
+                <div class="contacts__box">
+                    <a class="contacts__address" href="https://www.google.com.ua/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6055472,22.3189657,14z/data=!4m5!3m4!1s0x0:0x692b297a0b03192!8m2!3d48.6166262!4d22.2997999?hl=ru" target="_blank">
+                        <span class="contacts__title">Адреса:</span>
+                        <span class="contacts__description">м.Ужгород,<br>вул.Мукачівска 28</span>
+                    </a>
+                    <div class="contacts__schedule">
+                        <span class="contacts__title">Графік роботи:</span>
+                        <span class="contacts__description">
+                            Пн-Пт: 9.00-18.00<br>
+                            Сб: 10.00-15.00<br>
+                            Нд - вихідний
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466.2744943930528!2d22.29957222058875!3d48.616602679908276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b2abd31343%3A0x692b297a0b03192!2z0JzQkNCT0JDQl9CY0J0gIk9ESyI!5e0!3m2!1sru!2sua!4v1613485011686!5m2!1sru!2sua" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
     </main>
-    <footer>
-        <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
-        <a href="">Політика конфіденційності</a>
-        <a href="tel:+"></a>
-        <a href="mailto:"></a>
-        <a href="https://www.facebook.com/okna.dveri.krovlya">Facebook</a>
-        <a href="https://www.instagram.com/odk.eurolux">Instagram</a>
-        <a href="https://www.youtube.com/channel/UC0FK3Gm0uho7RKfPd7Vbg7A">YouTube</a>
+    <footer class="main-footer">
+        <div class="main-footer__container wrapper">
+            <a href="#">
+                <img class="main-logo" src="./img/logo_ODK.svg" alt="Логотип 'ODK'">
+            </a>
+            <div class="main-footer__social">
+                <a class="main-footer__telephone" href="tel:+380506114689">+380506114689</a>
+                <a class="main-footer__mail" href="mailto:odk.eurolux@gmail.com">odk.eurolux@gmail.com</a>
+                <a class="main-footer__facebook" href="https://www.facebook.com/okna.dveri.krovlya" target="_blank">Facebook</a>
+                <a class="main-footer__instagram" href="https://www.instagram.com/odk.eurolux" target="_blank">Instagram</a>
+                <a class="main-footer__youtube" href="https://www.youtube.com/channel/UC0FK3Gm0uho7RKfPd7Vbg7A" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <span class="main-footer__container-policy wrapper">
+            <a class="main-footer__policy" href="#">Політика конфіденційності</a>
+        </span>
     </footer>
+    <section class="pop-up--callback">
+        <span class="pop-up__title--callback">Замовити зворотній дзвінок</span>
+        <p class="pop-up__description--callback">Заповніть форму, для замовлення зворотнього дзвінка</p>
+        <form class="pop-up__form--callback" action="" method="POST">
+            <input class="pop-up__your-name-field--callback" type="text" name="name--callback" id="your-name--callback" placeholder="Ваше ім'я" required>
+            <input class="pop-up__your-telephone-field--callback" type="tel" name="telephone--callback" id="your-telephone--callback" placeholder="+38 (___) ___ __ __" required>
+            <span class="pop-up__interest--callback">Що Вас цікавить?</span>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-1--callback" value="roofing-materials" checked>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-2--callback" value="accessories">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-3--callback" value="gutter-system">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-4--callback" value="windows-and-doors">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-5--callback" value="sps">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--callback" id="category-6--callback" value="garage-doors">
+            <ul class="pop-up__service-list--callback">
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--roofing-materials--callback" for="category-1--callback">Покрівельні матеріали</label>
+                </li>
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--accessories--callback" for="category-2--callback">Аксесуари</label>
+                </li>
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--gutter-system--callback" for="category-3--callback">Водостічні системи</label>
+                </li>
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--windows-and-doors--callback" for="category-4--callback">Вікна та двері</label>
+                </li>
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--sps--callback" for="category-5--callback">Сонцезахисні системи</label>
+                </li>
+                <li class="pop-up__service-item--callback">
+                    <label class="pop-up__service-label--callback pop-up__service-label--garage-doors--callback" for="category-6--callback">Гаражні ворота</label>
+                </li>
+            </ul>
+            <button class="pop-up__submit-button--callback" type="submit">Замовити</button>
+        </form>
+        <button class="pop-up__close--callback"></button>
+    </section>
+    <section class="pop-up--calculation">
+        <span class="pop-up__title--calculation">Замовити безкоштовний замір та розрахунок</span>
+        <p class="pop-up__description--calculation">Заповніть форму, для замовлення безкоштовного заміру та розрахунку</p>
+        <form class="pop-up__form--calculation" action="" method="POST">
+            <input class="pop-up__your-name-field--calculation" type="text" name="name--calculation" id="your-name--calculation" placeholder="Ваше ім'я" required>
+            <input class="pop-up__your-telephone-field--calculation" type="tel" name="telephone--calculation" id="your-telephone--calculation" placeholder="+38 (___) ___ __ __" required>
+            <span class="pop-up__interest--calculation">Що Вас цікавить?</span>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-1--calculation" value="roofing-materials" checked>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-2--calculation" value="accessories">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-3--calculation" value="gutter-system">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-4--calculation" value="windows-and-doors">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-5--calculation" value="sps">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--calculation" id="category-6--calculation" value="garage-doors">
+            <ul class="pop-up__service-list--calculation">
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--roofing-materials--calculation" for="category-1--calculation">Покрівельні матеріали</label>
+                </li>
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--accessories--calculation" for="category-2--calculation">Аксесуари</label>
+                </li>
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--gutter-system--calculation" for="category-3--calculation">Водостічні системи</label>
+                </li>
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--windows-and-doors--calculation" for="category-4--calculation">Вікна та двері</label>
+                </li>
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--sps--calculation" for="category-5--calculation">Сонцезахисні системи</label>
+                </li>
+                <li class="pop-up__service-item--calculation">
+                    <label class="pop-up__service-label--calculation pop-up__service-label--garage-doors--calculation" for="category-6--calculation">Гаражні ворота</label>
+                </li>
+            </ul>
+            <button class="pop-up__submit-button--calculation" type="submit">Замовити</button>
+        </form>
+        <button class="pop-up__close--calculation"></button>
+    </section>
+    <section class="pop-up--download">
+        <span class="pop-up__title--download">Завантажити каталог</span>
+        <p class="pop-up__description--download">Заповніть форму, щоб почати завантаження каталогу</p>
+        <form class="pop-up__form--download" action="" method="POST">
+            <input class="pop-up__your-name-field--download" type="text" name="name--download" id="your-name--download" placeholder="Ваше ім'я" required>
+            <input class="pop-up__your-telephone-field--download" type="tel" name="telephone--download" id="your-telephone--download" placeholder="+38 (___) ___ __ __" required>
+            <span class="pop-up__interest--download">Що Вас цікавить?</span>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-1--download" value="roofing-materials" checked>
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-2--download" value="accessories">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-3--download" value="gutter-system">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-4--download" value="windows-and-doors">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-5--download" value="sps">
+            <input class="visually-hidden" type="radio" name="pop-up-toggle--download" id="category-6--download" value="garage-doors">
+            <ul class="pop-up__service-list--download">
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--roofing-materials--download" for="category-1--download">Покрівельні матеріали</label>
+                </li>
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--accessories--download" for="category-2--download">Аксесуари</label>
+                </li>
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--gutter-system--download" for="category-3--download">Водостічні системи</label>
+                </li>
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--windows-and-doors--download" for="category-4--download">Вікна та двері</label>
+                </li>
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--sps--download" for="category-5--download">Сонцезахисні системи</label>
+                </li>
+                <li class="pop-up__service-item--download">
+                    <label class="pop-up__service-label--download pop-up__service-label--garage-doors--download" for="category-6--download">Гаражні ворота</label>
+                </li>
+            </ul>
+            <button class="pop-up__submit-button--download" type="submit">Завантажити каталог</button>
+        </form>
+        <button class="pop-up__close--download"></button>
+    </section>
+    <div class="pop-up__overlay"></div>
+    <script src="./src/header.js"></script>
+    <script src="./src/jquery-2.2.0.js" type="text/javascript"></script>
+    <script src="./src/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./src/smooth-scroll.js"></script>
+    <script src="./src/pop-up.js"></script>
+    <script src="./src/fotorama.dev.js"></script>
 </body>
 </html>
