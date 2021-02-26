@@ -2644,6 +2644,7 @@ header {
     line-height: 36px;
     color: #323441;
     align-self: flex-start;
+    text-align: left;
 }
 
 .inner-page__slide-table-data--right {
@@ -2654,6 +2655,7 @@ header {
     line-height: 36px;
     color: #323441;
     align-self: flex-end;
+    text-align: right;
 }
 
 .inner-page__slide-table-row:nth-child(n+2):before {
@@ -2736,4 +2738,110 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 40px;
+}
+
+.gutter-system__color::before,
+.gutter-system__color::after {
+    display: none;
+}
+
+.gutter-system__color {
+    margin-top: -35px;
+}
+
+.gutter-system__color--ral-3005,
+.gutter-system__color--ral-3009,
+.gutter-system__color--ral-8004,
+.gutter-system__color--ral-8003,
+.gutter-system__color--ral-8017,
+.gutter-system__color--ral-8019,
+.gutter-system__color--ral-6020,
+.gutter-system__color--ral-9005,
+.gutter-system__color--ral-7011,
+.gutter-system__color--ral-9007,
+.gutter-system__color--ral-7024,
+.gutter-system__color--ral-9006,
+.gutter-system__color--ral-9010,
+.gutter-system__color--ral-9016 {
+    margin-top: 70px;
+    position: relative;
+    font-size: 30px;
+}
+
+.gutter-system__color--ral-3005::before,
+.gutter-system__color--ral-3009::before,
+.gutter-system__color--ral-8004::before,
+.gutter-system__color--ral-8003::before,
+.gutter-system__color--ral-8017::before,
+.gutter-system__color--ral-8019::before,
+.gutter-system__color--ral-6020::before,
+.gutter-system__color--ral-9005::before,
+.gutter-system__color--ral-7011::before,
+.gutter-system__color--ral-9007::before,
+.gutter-system__color--ral-7024::before,
+.gutter-system__color--ral-9006::before,
+.gutter-system__color--ral-9010::before,
+.gutter-system__color--ral-9016::before {
+    content: " ";
+    height: 60px;
+    width: 60px;
+    border: 2px solid #323441;
+    position: absolute;
+    top: -70px;
+}
+
+.gutter-system__color--ral-3005::before {
+    background-color: #59191f;
+}
+
+.gutter-system__color--ral-3009::before {
+    background-color: #6d342d;
+}
+
+.gutter-system__color--ral-8004::before {
+    background-color: #8d4931;
+}
+
+.gutter-system__color--ral-8003::before {
+    background-color: #7e4b26;
+}
+
+.gutter-system__color--ral-8017::before {
+    background-color: #442f29;
+}
+
+.gutter-system__color--ral-8019::before {
+    background-color: #3d3635;
+}
+
+.gutter-system__color--ral-6020::before {
+    background-color: #37422f;
+}
+
+.gutter-system__color--ral-9005::before {
+    background-color: #0e0e10;
+}
+
+.gutter-system__color--ral-7011::before {
+    background-color: #52595d;
+}
+
+.gutter-system__color--ral-9007::before {
+    background-color: #878581;
+}
+
+.gutter-system__color--ral-7024::before {
+    background-color: #45494e;
+}
+
+.gutter-system__color--ral-9006::before {
+    background-color: #a1a1a0;
+}
+
+.gutter-system__color--ral-9010::before {
+    background-color: #f1ece1;
+}
+
+.gutter-system__color--ral-9016::before {
+    background-color: #f1f0ea;
 }
