@@ -8,9 +8,11 @@
     <link rel="icon" type="image/png" href="./favicon.png"> 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fotorama.dev.css">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
 </head>
 <body>
-    <header id="odk">
+    <header>
         <div class="background-container">
             <div class="header wrapper">
                 <div class="navigation-container">
@@ -41,74 +43,105 @@
     </header>
     <main>
         <h1 class="visually-hidden">ODK магазин покрівельних матеріалів, металопластикових/алюмінієвих вікон та дверей, жалюзів та ролетів</h1>
-        <section class="carousel">
+        <section class="carousel" id="odk">
             <div class="wrapper">
-                <div class="fotorama" data-width="100%" data-height="500px" data-loop="true" data-autoplay="3000" data-stopautoplayontouch="false" data-keyboard="true">
-                    <div class="top-slides">
-                        <div class="top-slides__image">
-                            <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
-                        </div>
-                        <div class="top-slides__description">
-                            <h2 class="top-slides__title">Металочерепиця</h2>
-                            <div class="top-slides__table">
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Гарантія</span>
-                                    <span class="top-slides__table-data--right">до 50 років</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Товщина металу</span>
-                                    <span class="top-slides__table-data--right">від 0,4 до 0,5 мм</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Ціна</span>
-                                    <span class="top-slides__table-data--right">від 140 грн/м<sup>2</sup></span>
+                <div class="carousel__grid"></div>
+                <div class="fotorama"  data-swipe="true" data-arrows="true" data-click="false" data-width="100%" data-height="550px" data-loop="true" data-autoplay="true" data-stopautoplayontouch="true" data-keyboard="true">
+                    <div>
+                        <a href="./inner-pages/services/roofing-materials.html" class="top-slides">
+                            <div class="top-slides__image">
+                                <img src="./img/modern_7016.png" alt="Металочерепиця Модерн">
+                            </div>
+                            <div class="top-slides__description">
+                                <h2 class="top-slides__title">Металочерепиця</h2>
+                                <div class="top-slides__table">
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Гарантія</span>
+                                        <span class="top-slides__table-data--right">до 50 років</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Товщина металу</span>
+                                        <span class="top-slides__table-data--right">від 0,4 до 0,5 мм</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Ціна</span>
+                                        <span class="top-slides__table-data--right">від 140 грн/м<sup>2</sup></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                    <div class="top-slides">
-                        <div class="top-slides__image">
-                            <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
-                        </div>
-                        <div class="top-slides__description">
-                            <h2 class="top-slides__title">Металопластикові конструкції</h2>
-                            <div class="top-slides__table">
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Гарантія</span>
-                                    <span class="top-slides__table-data--right">до 15 років</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Кількість камер</span>
-                                    <span class="top-slides__table-data--right">від 3 до 9</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Товщина склопакету</span>
-                                    <span class="top-slides__table-data--right">від 24 до 52 мм<sup>2</sup></span>
+                    <div>
+                        <a href="./inner-pages/services/windows-and-doors.html" class="top-slides">
+                            <div class="top-slides__image">
+                                <img src="./img/gealan-9000.png" alt="Профіль Gealan 9000">
+                            </div>
+                            <div class="top-slides__description">
+                                <h2 class="top-slides__title">Металопластикові конструкції</h2>
+                                <div class="top-slides__table">
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Гарантія</span>
+                                        <span class="top-slides__table-data--right">до 15 років</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Кількість камер</span>
+                                        <span class="top-slides__table-data--right">від 3 до 9</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Товщина<br>склопакету</span>
+                                        <span class="top-slides__table-data--right">від 24 до 52 мм<sup>2</sup></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                    <div class="top-slides">
-                        <div class="top-slides__image">
-                            <img src="./img/blinds.png" alt="Ролети день-ніч">
-                        </div>
-                        <div class="top-slides__description">
-                            <h2 class="top-slides__title">Системи<br>день - ніч</h2>
-                            <div class="top-slides__table">
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Гарантія</span>
-                                    <span class="top-slides__table-data--right">до 3 років</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Затемнення</span>
-                                    <span class="top-slides__table-data--right">до 90%</span>
-                                </div>
-                                <div class="top-slides__table-row">
-                                    <span class="top-slides__table-data--left">Ціна</span>
-                                    <span class="top-slides__table-data--right">від 487 грн/м<sup>2</sup></span>
+                    <div>
+                        <a href="./inner-pages/services/sps.html" class="top-slides">
+                            <div class="top-slides__image">
+                                <img src="./img/blinds.png" alt="Ролети день-ніч">
+                            </div>
+                            <div class="top-slides__description">
+                                <h2 class="top-slides__title">Системи<br>день - ніч</h2>
+                                <div class="top-slides__table">
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Гарантія</span>
+                                        <span class="top-slides__table-data--right">до 3 років</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Затемнення</span>
+                                        <span class="top-slides__table-data--right">до 90%</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Ціна</span>
+                                        <span class="top-slides__table-data--right">від 487 грн/м<sup>2</sup></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./inner-pages/services/windows-and-doors.html" class="top-slides">
+                            <div class="top-slides__image">
+                                <img src="./img/doors.jpg" alt="Вхідні двері">
+                            </div>
+                            <div class="top-slides__description">
+                                <h2 class="top-slides__title">Вхідні двері</h2>
+                                <div class="top-slides__table">
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Гарантія</span>
+                                        <span class="top-slides__table-data--right">до 5 років</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Монтажна глибина</span>
+                                        <span class="top-slides__table-data--right">до 82 мм</span>
+                                    </div>
+                                    <div class="top-slides__table-row">
+                                        <span class="top-slides__table-data--left">Матеріали виготовлення</span>
+                                        <span class="top-slides__table-data--right">металопластик,<br>алюміній, сталь</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -133,17 +166,17 @@
                 </li>
                 <li>
                     <h3>
-                        <a class="services-list__item services-list__item--windows-and-doors" href="windows-and-doors">Вікна та двері</a>                        
+                        <a class="services-list__item services-list__item--windows-and-doors" href="./inner-pages/services/windows-and-doors.html">Вікна та двері</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a class="services-list__item services-list__item--sps" href="sps">Сонцезахисні системи</a>                        
+                        <a class="services-list__item services-list__item--sps" href="./inner-pages/services/sps.html">Сонцезахисні системи</a>                        
                     </h3>
                 </li>
                 <li>
                     <h3>
-                        <a class="services-list__item services-list__item--garage-doors" href="garage-doors">Гаражні ворота</a>                        
+                        <a class="services-list__item services-list__item--garage-doors" href="./inner-pages/services/garage-doors.html">Гаражні ворота</a>                        
                     </h3>
                 </li>
             </ul>
@@ -152,30 +185,135 @@
             <div class="about-us-container wrapper">
                 <h2 class="about-us__title">Про нас у цифрах</h2>
                 <p class="about-us__advantages about-us__advantages--protection"><em>13</em> років у сфері</p>
+                <span class="about-us__separator--right"></span>
                 <p class="about-us__advantages about-us__advantages--ventas">Продано більше <em>100 000 м<sup>2</sup></em> покрівельних матеріалів</p>
+                <span class="about-us__separator--left"></span>
                 <p class="about-us__advantages about-us__advantages--handshake">Більше <em>5000</em> успішних угод</p>
+                <span class="about-us__separator--right"></span>
                 <p class="about-us__advantages about-us__advantages--checklist"><em>Гарантуємо</em> високу якість, професійний підхід, безкоштовний замір та розрахунок</p>
             </div>
         </section>
         <section class="our-facilities wrapper" id="our-facilities">
             <h2 class="our-facilities__title">Наші об'єкти</h2>
-            <div class="center slider">
-                <div class="slide-box">
-                    <img src="./img/works-1.jpg">
+            <div class="owl-carousel owl-theme">
+                <div class="our-facilities__slide">
+                    <img src="./img/works-1.jpg" alt="Фото даху з керамічною черепицею">
                 </div>
-                <div class="slide-box">
-                    <img src="./img/works-2.jpg">
+                <div class="our-facilities__slide">
+                    <img src="./img/works-2.jpg" alt="Перше фото фасаду торгівельного центру з алюмінію">
                 </div>
-                <div class="slide-box">
-                    <img src="./img/works-3.jpg">
+                <div class="our-facilities__slide">
+                    <img src="./img/works-3.jpg" alt="Друге фото фасаду торгівельного центру з алюмінію">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-4.jpg" alt="Перше фото вертикальних штор">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-5.jpg" alt="Друге фото вертикальних штор">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-6.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-7.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-8.jpg" alt="Фото фасаду будинку з панорамними вікнами">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-9.jpg" alt="Фото даху з бітумною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-10.jpg" alt="Фото даху з бітумною черепицею">
+                </div>
+                <!-- <div class="our-facilities__slide">
+                    <img src="./img/works-11.jpg" alt="Фото даху з плосктою керамічною черепицею">
+                </div> -->
+                <div class="our-facilities__slide">
+                    <img src="./img/works-12.jpg" alt="Фото даху з композитною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-13.jpg" alt="Фото даху з композитною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-14.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-15.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-16.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-17.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-18.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-19.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-20.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-21.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-22.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-23.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-24.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-25.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-26.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-27.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-28.jpg" alt="Фото даху з плосктою керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-29.jpg" alt="Фото даху з композитною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-30.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-31.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-32.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-33.jpg" alt="Фото даху з бітумною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-34.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-35.jpg" alt="Фото даху з металочерепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-36.jpg" alt="Фото даху з керамічною черепицею">
+                </div>
+                <div class="our-facilities__slide">
+                    <img src="./img/works-37.jpg" alt="Фото даху з металочерепицею">
                 </div>
             </div>
         </section>
         <section class="reviews wrapper">
             <h2 class="reviews__title">Що про нас думають</h2>
             <a class="reviews__button" href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Залишити відгук</a>
-            <div class="center slider reviews-slider">
-                <div class="slide-box reviews-card">
+            <div class="owl-carousel owl-theme reviews-slider">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-1.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Купувала в цiй компанii металочерепицю п'ть рокiв назад,якiстю задоволена.Тепер придбала вiкна по гарнiй цiнi.Рекомендую всiм.</a>
@@ -184,7 +322,7 @@
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Тетяна Барабаш</a>
                     </span>
                 </div>
-                <div class="slide-box reviews-card">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-2.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">надежные партнеры.рекомендую!</a>
@@ -193,7 +331,7 @@
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Светлана Ладанюк</a>
                     </span>
                 </div>
-                <div class="slide-box reviews-card">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-3.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Замовляв вікна в ODK. Отримав якісний результат в короткі терміни! Крута робота, дякую команді!👍🏼</a>
@@ -202,7 +340,7 @@
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Дмитрий Винцерский</a>
                     </span>
                 </div>
-                <div class="slide-box reviews-card">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-4.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Придбав вікна в ОДК, виконали все оперативно та якісно. Дуже задоволений роботою менеджерів, рекомендую всім👍</a>
@@ -211,7 +349,7 @@
                         <a href="https://www.facebook.com/okna.dveri.krovlya/reviews/?ref=page_internal" target="_blank">Леонид Пастухов</a>
                     </span>
                 </div>
-                <div class="slide-box reviews-card">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-5.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Гарний магазин! Мені сподобалось! Привітні працівники, кваліфіковано та зарозуміло для мене розповіли чим можна перекрити дах, які вікна можна собі поставити. Замовив в них ролети та думаю в осені прийду до них за металочерепицею. Рекомендую 👍</a>
@@ -220,7 +358,7 @@
                         <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Maxim Dobritskii</a>
                     </span>
                 </div>
-                <div class="slide-box reviews-card">
+                <div class="reviews-card">
                     <img class="reviews__avatar" src="./img/reviews-6.png" alt="Фото з аватар">
                     <p class="reviews__description">
                         <a href="https://www.google.com/maps/place/%D0%9C%D0%90%D0%93%D0%90%D0%97%D0%98%D0%9D+%22ODK%22/@48.6166282,22.2976043,17z/data=!4m7!3m6!1s0x473919b2abd31343:0x692b297a0b03192!8m2!3d48.6166247!4d22.299793!9m1!1b1" target="_blank">Хороший асортимент, нормальні ціни, адекватні продавці</a>
@@ -233,50 +371,42 @@
         </section>
         <section class="news">
             <div class="news-container wrapper">
-                <h2 class="news__title">Акції, новини, статті</h2>
-                <div class="news__list">
+                <a href="./inner-pages/news.html">
+                    <h2 class="news__title">Акції, новини, статті</h2>
+                </a>
+                <div class="news__list-main">
                     <div class="news__colomn-left">
-                        <a class="news__data-left" href="#">
-                            <img src="./img/news-1.jpg" alt="Новинка «Металочерепиця 
-                            Madera та Venera» Акція «За
-                            кожні 100 кв.м. даху – 
-                            супердифузійна плівка в 
-                            подарунок»">
+                        <a class="news__data-left" href="./inner-pages/news/article-33.html">
+                            <div class="news__news-img-left">
+                                <img src="./img/news/news-33.jpg" alt="Що таке теплий монтаж вікон від ODK?">
+                            </div>
                             <div class="news__news-title-left">
-                                <span>04.07.2019</span>
-                                <h3>Новинка «Металочерепиця 
-                                    Madera та Venera» Акція «За
-                                    кожні 100 кв.м. даху – 
-                                    супердифузійна плівка в 
-                                    подарунок»
+                                <span>22.07.2019</span>
+                                <h3>Що таке теплий монтаж вікон від ODK?
                                 </h3>
                             </div>
                         </a>
                     </div>
                     <div class="news__colomn-right">
-                        <a class="news__data-right" href="#">
-                            <img src="./img/news-2.jpg" alt="Акція «Придбай 
-                            сонцезахисні системи 
-                            – отримай монтаж у
-                            подарунок»">
+                        <a class="news__data-right" href="./inner-pages/news/article-32.html">
+                            <div class="news__news-img-right">
+                                <img src="./img/news/news-32.jpg" alt="Що потрібно знати при виборі бітумної черепиці для вашого даху!">
+                            </div>
                             <div class="news__news-title-right">
-                                <span>04.07.2019</span>
-                                <h3>Акція «Придбай 
-                                    сонцезахисні системи 
-                                    – отримай монтаж у
-                                    подарунок»
+                                <span>22.07.2019</span>
+                                <h3>Що потрібно знати при виборі бітумної черепиці для вашого даху!🏠🏘🏡
                                 </h3>
                             </div>
                         </a>
-                        <a class="news__data-right" href="#">
-                            <img src="./img/news-3.jpg" alt="Акція «Обери 
-                            подарунок при купівлі 
-                            віконних систем»">
+                        <a class="news__data-right" href="./inner-pages/news/article-31.html">
+                            <div class="news__news-img-right">
+                                <img src="./img/news/news-31.jpg" alt="Акція «Обери 
+                                подарунок при купівлі 
+                                віконних систем»">
+                            </div>
                             <div class="news__news-title-right">
                                 <span>04.07.2019</span>
-                                <h3>Акція «Обери 
-                                    подарунок при купівлі 
-                                    віконних систем»
+                                <h3>Акція🤩 «Придбай сонцезахисні системи - отримай монтаж у подарунок»🎁
                                 </h3>
                             </div>
                         </a>
@@ -292,20 +422,24 @@
                     <span class="our-team__manager-name">Дьопйош Юрій</span>
                     <span class="our-team__manager-department">Власник</span>
                     <a class="our-team__manager-telephone" href="tel:+380506114689">+38 050-611-46-89</a>
+                    <a class="our-team__manager-telephone" href="tel:+380972577591">+38 097-257-75-91</a>
                 </div>
                 <div class="our-team__manager-card">
                     <img src="./img/manager-2.jpg" alt="Фото Василь">
                     <span class="our-team__manager-name">Василь</span>
                     <span class="our-team__manager-department">Покрівельний відділ</span>
-                    <a class="our-team__manager-telephone" href="tel:+38 050-111-11-11">+38 050-111-11-11</a>
+                    <a class="our-team__manager-telephone" href="tel:+380668556004">+38 066-855-60-04</a>
+                    <a class="our-team__manager-telephone" href="tel:+380684367496">+38 068-436-74-96</a>
                 </div>
                 <div class="our-team__manager-card">
                     <img src="./img/manager-3.jpg" alt="Фото Руслана">
                     <span class="our-team__manager-name">Руслана</span>
                     <span class="our-team__manager-department">Віконний відділ</span>
-                    <a class="our-team__manager-telephone" href="tel:+38 050-222-22-22">+38 050-222-22-22</a>
+                    <a class="our-team__manager-telephone" href="tel:+380661202419">+38 066-120-24-19</a>
+                    <a class="our-team__manager-telephone" href="tel:+380680078942">+38 068-007-89-42</a>
                 </div>
             </div>
+            <span class="our-team__separator"></span>
         </section>
         <section class="contacts">
             <div class="contacts__container wrapper">
@@ -341,7 +475,7 @@
             </div>
         </div>
         <span class="main-footer__container-policy wrapper">
-            <a class="main-footer__policy" href="#">Політика конфіденційності</a>
+            <a class="main-footer__policy" href="./inner-pages/privacy-policy.html">Політика конфіденційності</a>
         </span>
     </footer>
     <section class="pop-up--callback">
@@ -456,13 +590,18 @@
         <button class="pop-up__close--download"></button>
     </section>
     <div class="pop-up__overlay"></div>
-    <script src="./src/header.js"></script>
     <script src="./src/jquery-2.2.0.js" type="text/javascript"></script>
-    <script src="./src/slick.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./src/smooth-scroll.js"></script>
-    <script src="./src/pop-up.js"></script>
-    <script src="./src/fotorama.dev.js"></script>
     <script src="./src/jquery.maskedinput.js"></script>
-    <script src="./src/pop-input-mask.js"></script>
+    <script src="./src/scroll.js"></script> <!-- for smooth scroll and spy scroll -->
+    <script src="./src/header.js"></script> <!-- for header opacity after scroll -->
+    <script src="./src/pop-up.js"></script> <!-- for pop-ups -->
+    <script src="./src/fotorama.dev.js"></script> <!-- for fotorama sliders -->
+    <script src="./src/pop-input-mask.js"></script> <!-- for pop up telephone input -->
+    <script src="./src/owl.carousel.js"></script> <!-- for owl sliders -->
+    <script src="./src/owl.autoplay.js"></script> <!-- for owl sliders -->
+    <script src="./src/owl.navigation.js"></script> <!-- for owl sliders -->
+    <script src="./src/owl.support.js"></script> <!-- for owl sliders -->
+    <script src="./src/owl.support.modernizr.js"></script> <!-- for owl sliders -->
+    <script src="./src/owl.customization.js"></script> <!-- for owl sliders -->
 </body>
 </html>

@@ -22,3 +22,6 @@ $("#your-telephone--download").click(function(){
   $(this).setCursorPosition(5);
 }).mask("+38 (999) 999-99-99");
 
+$("#your-telephone--cooperation").click(function(){
+  $(this).setCursorPosition(5);
+}).mask("+38 (999) 999-99-99");
