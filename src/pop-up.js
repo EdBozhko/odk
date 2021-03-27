@@ -14,7 +14,6 @@ let closePopUpDownload = document.querySelector(".pop-up__close--download")
 let popUpOverlay = document.querySelector(".pop-up__overlay");
 
 
-
 popUpCallbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     popUpCallback.classList.add("pop-up-show")
@@ -58,3 +57,7 @@ popUpOverlay.addEventListener("click", function (evt) {
     popUpDownload.classList.remove("pop-up-show")
     popUpOverlay.classList.remove("pop-up-show")
 })
+
+function uncheck() {
+    document.getElementById("hamburger").checked = false;
+}

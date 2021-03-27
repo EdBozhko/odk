@@ -1,15 +1,9 @@
 @font-face {
-    font-family: 'krungthepregular';
-    src: url(../fonts/krungthep-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'pf_dintext_probold';
     src: url(../fonts/pfdintextpro-bold-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +11,7 @@
     src: url(../fonts/pfdintextpro-light-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -24,6 +19,7 @@
     src: url(../fonts/pfdintextpro-medium-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -31,13 +27,7 @@
     src: url(../fonts/pfdintextpro-regular-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'pf_dintext_prothin';
-    src: url(../fonts/pfdintextpro-thin-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -45,29 +35,21 @@
     src: url(../fonts/pfdintextpro-xblack-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
-
-@font-face {
-    font-family: 'pf_dintext_proextrathin';
-    src: url(../fonts/pfdintextpro-xthin-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 
 
 /* global rules */
 
-/* * {
-    border: 1px solid red;
-} */
-
-
 body {
     margin: 0;
     padding: 0;
     background-color: #f2efed;
+}
+
+main {
+    overflow: hidden;
 }
 
 ul {
@@ -105,10 +87,15 @@ a {
 
 /* header navigation panel*/
 
+.hamburger {
+    display: none;
+}
+
 header {
     margin: 0;
     padding: 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 2;
 }
@@ -116,6 +103,7 @@ header {
 .header-navigation__list {
     margin: 0;
     padding: 0;
+    margin-left: 10px;
     display: flex;
 }
 
@@ -163,8 +151,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-
 
 .background-container {
     left: 0;
@@ -234,7 +220,6 @@ header {
     z-index: 1;
 }
 
-
 .service-panel .wrapper {
     display: flex;
     justify-content: space-between;
@@ -243,30 +228,325 @@ header {
     box-sizing: border-box;
 }
 
+.service-panel__item:nth-child(2n) {
+    margin: 0 30px;
+}
+
 @keyframes change-background-service-panel {
     0% {
-        background-color: rgba(50,52,65,0);
+        background: linear-gradient(324deg, rgba(229, 90, 29, 1),rgba(239, 155, 100, 1));
     }
-
+    1% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.98),rgba(239, 155, 100, 0.98));
+    }
+    2% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.96),rgba(239, 155, 100, 0.96));
+    }
+    3% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.94),rgba(239, 155, 100, 0.94));
+    }
+    4% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.92),rgba(239, 155, 100, 0.92));
+    }
+    5% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.9),rgba(239, 155, 100, 0.9));
+    }
+    6% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.88),rgba(239, 155, 100, 0.88));
+    }
+    7% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.86),rgba(239, 155, 100, 0.86));
+    }
+    8% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.84),rgba(239, 155, 100, 0.84));
+    }
+    9% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.82),rgba(239, 155, 100, 0.82));
+    }
+    10% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.8),rgba(239, 155, 100, 0.8));
+    }
+    11% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.78),rgba(239, 155, 100, 0.78));
+    }
+    12% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.76),rgba(239, 155, 100, 0.76));
+    }
+    13% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.74),rgba(239, 155, 100, 0.74));
+    }
+    14% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.72),rgba(239, 155, 100, 0.72));
+    }
+    15% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.7),rgba(239, 155, 100, 0.7));
+    }
+    16% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.68),rgba(239, 155, 100, 0.68));
+    }
+    17% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.66),rgba(239, 155, 100, 0.66));
+    }
+    18% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.64),rgba(239, 155, 100, 0.64));
+    }
+    19% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.62),rgba(239, 155, 100, 0.62));
+    }
+    20% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.6),rgba(239, 155, 100, 0.6));
+    }
+    21% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.58),rgba(239, 155, 100, 0.58));
+    }
+    22% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.56),rgba(239, 155, 100, 0.56));
+    }
+    23% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.54),rgba(239, 155, 100, 0.54));
+    }
+    24% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.52),rgba(239, 155, 100, 0.52));
+    }
+    25% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.5),rgba(239, 155, 100, 0.5));
+    }
+    26% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.48),rgba(239, 155, 100, 0.48));
+    }
+    27% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.46),rgba(239, 155, 100, 0.46));
+    }
+    28% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.44),rgba(239, 155, 100, 0.44));
+    }
+    29% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.42),rgba(239, 155, 100, 0.42));
+    }
+    30% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.4),rgba(239, 155, 100, 0.4));
+    }
+    31% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.38),rgba(239, 155, 100, 0.38));
+    }
+    32% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.36),rgba(239, 155, 100, 0.36));
+    }
+    33% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.34),rgba(239, 155, 100, 0.34));
+    }
+    34% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.32),rgba(239, 155, 100, 0.32));
+    }
+    35% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.3),rgba(239, 155, 100, 0.3));
+    }
+    36% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.28),rgba(239, 155, 100, 0.28));
+    }
+    37% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.26),rgba(239, 155, 100, 0.26));
+    }
+    38% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.24),rgba(239, 155, 100, 0.24));
+    }
+    39% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.22),rgba(239, 155, 100, 0.22));
+    }
+    40% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.2),rgba(239, 155, 100, 0.2));
+    }
+    41% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.18),rgba(239, 155, 100, 0.18));
+    }
+    42% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.16),rgba(239, 155, 100, 0.16));
+    }
+    43% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.14),rgba(239, 155, 100, 0.14));
+    }
+    44% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.12),rgba(239, 155, 100, 0.12));
+    }
+    45% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.1),rgba(239, 155, 100, 0.1));
+    }
+    46% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.08),rgba(239, 155, 100, 0.08));
+    }
+    47% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.06),rgba(239, 155, 100, 0.06));
+    }
+    48% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.04),rgba(239, 155, 100, 0.04));
+    }
+    49% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.02),rgba(239, 155, 100, 0.02));
+    }
     50% {
-        background-color: rgb(238, 39, 39);
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0),rgba(239, 155, 100, 0));
     }
-
+    51% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.02),rgba(239, 155, 100, 0.02));
+    }
+    52% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.04),rgba(239, 155, 100, 0.04));
+    }
+    53% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.06),rgba(239, 155, 100, 0.06));
+    }
+    54% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.08),rgba(239, 155, 100, 0.08));
+    }
+    55% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.1),rgba(239, 155, 100, 0.1));
+    }
+    56% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.12),rgba(239, 155, 100, 0.12));
+    }
+    57% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.14),rgba(239, 155, 100, 0.14));
+    }
+    58% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.16),rgba(239, 155, 100, 0.16));
+    }
+    59% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.18),rgba(239, 155, 100, 0.18));
+    }
+    60% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.2),rgba(239, 155, 100, 0.2));
+    }
+    61% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.22),rgba(239, 155, 100, 0.22));
+    }
+    62% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.24),rgba(239, 155, 100, 0.24));
+    }
+    63% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.26),rgba(239, 155, 100, 0.26));
+    }
+    64% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.28),rgba(239, 155, 100, 0.28));
+    }
+    65% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.3),rgba(239, 155, 100, 0.3));
+    }
+    66% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.32),rgba(239, 155, 100, 0.32));
+    }
+    67% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.34),rgba(239, 155, 100, 0.34));
+    }
+    68% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.36),rgba(239, 155, 100, 0.36));
+    }
+    69% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.38),rgba(239, 155, 100, 0.38));
+    }
+    70% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.4),rgba(239, 155, 100, 0.4));
+    }
+    71% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.42),rgba(239, 155, 100, 0.42));
+    }
+    72% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.44),rgba(239, 155, 100, 0.44));
+    }
+    73% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.46),rgba(239, 155, 100, 0.46));
+    }
+    74% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.48),rgba(239, 155, 100, 0.48));
+    }
+    75% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.5),rgba(239, 155, 100, 0.5));
+    }
+    76% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.52),rgba(239, 155, 100, 0.52));
+    }
+    77% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.54),rgba(239, 155, 100, 0.54));
+    }
+    78% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.56),rgba(239, 155, 100, 0.56));
+    }
+    79% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.58),rgba(239, 155, 100, 0.58));
+    }
+    80% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.6),rgba(239, 155, 100, 0.6));
+    }
+    81% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.62),rgba(239, 155, 100, 0.62));
+    }
+    82% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.64),rgba(239, 155, 100, 0.64));
+    }
+    83% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.66),rgba(239, 155, 100, 0.66));
+    }
+    84% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.68),rgba(239, 155, 100, 0.68));
+    }
+    85% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.7),rgba(239, 155, 100, 0.7));
+    }
+    86% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.72),rgba(239, 155, 100, 0.72));
+    }
+    87% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.74),rgba(239, 155, 100, 0.74));
+    }
+    88% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.76),rgba(239, 155, 100, 0.76));
+    }
+    89% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.78),rgba(239, 155, 100, 0.78));
+    }
+    90% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.8),rgba(239, 155, 100, 0.8));
+    }
+    91% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.82),rgba(239, 155, 100, 0.82));
+    }
+    92% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.84),rgba(239, 155, 100, 0.84));
+    }
+    93% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.86),rgba(239, 155, 100, 0.86));
+    }
+    94% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.88),rgba(239, 155, 100, 0.88));
+    }
+    95% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.9),rgba(239, 155, 100, 0.9));
+    }
+    96% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.92),rgba(239, 155, 100, 0.92));
+    }
+    97% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.94),rgba(239, 155, 100, 0.94));
+    }
+    98% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.96),rgba(239, 155, 100, 0.96));
+    }
+    99% {
+        background: linear-gradient(324deg, rgba(229, 90, 29, 0.98),rgba(239, 155, 100, 0.98));
+    }
     100% {
-        background-color: rgba(50,52,65,0);
+        background: linear-gradient(324deg, rgba(229, 90, 29, 1),rgba(239, 155, 100, 1));
     }
 }
 
-
 .service-panel__item {
     animation: change-background-service-panel;
-    animation-duration: 1s;
+    animation-duration: 4s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     border-radius: 5px;
+    height: 70%;
     margin: 0;
     padding: 0;
-    background-color: rgba(50,52,65,0.7);
     font-family: 'pf_dintext_probold', Arial, sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -279,37 +559,28 @@ header {
     color: #89c2f0;
 }
 
-.service-panel__item--callback::before {
-    content: " ";
-    height: 50px;
-    width: 50px;
-    background-image: url("../img/callback.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-}
-
-.service-panel__item--calculation::before {
-    content: " ";
-    height: 50px;
-    width: 50px;
-    background-image: url("../img/ruler.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-}
-
+.service-panel__item--callback::before,
+.service-panel__item--calculation::before,
 .service-panel__item--download-catalog::before {
     content: " ";
     height: 50px;
     width: 50px;
-    background-image: url("../img/download.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
+}
+
+.service-panel__item--callback::before {
+    background-image: url("../img/callback.svg");
+}
+
+.service-panel__item--calculation::before {
+    background-image: url("../img/ruler.svg");
+}
+
+.service-panel__item--download-catalog::before {
+    background-image: url("../img/download.svg");
 }
 
 
@@ -317,37 +588,29 @@ header {
 
 /* top slider */
 
-
-.carousel .wrapper {
+.carousel.wrapper {
     position: relative;
     overflow: visible !important;
-}
-
-.carousel::before {
-    content: "";
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to right top, #f2efed 50%, transparent 50%);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 640px;
-    z-index: -1;
+    border-top: 120px solid transparent;
 }
 
 .carousel::after {
     content: " ";
-    height: 720px;
-    width: 100%;
-    background: linear-gradient(to bottom, #323441, #717596);
+    width: 0;
+    height: 130%;
+    border-right: 100vw solid #4b4e61;
+    border-bottom: 80px solid transparent;
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
-    top: 0;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -3;
 }
 
-.carousel__grid {
+.carousel::before {
+    content: "";
     overflow: visible;
     min-height: 790px;
     min-width: 1400px;
@@ -379,6 +642,7 @@ header {
 /* top slides description */
 
 .top-slides__description {
+    height: 500px;
     width: 50%;
     margin-left: 20px;
     display: flex;
@@ -464,7 +728,6 @@ header {
     cursor: pointer;
 }
 
-
 .fotorama__arr,
 .carousel .fotorama__arr {
     top: 0;
@@ -476,6 +739,7 @@ header {
 .fotorama__arr--prev,
 .carousel .fotorama__arr--prev {
     background-image:  url('../img/arrow-left.png');
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -483,6 +747,7 @@ header {
 .fotorama__arr--next,
 .carousel .fotorama__arr--next {
     background-image:  url('../img/arrow-right.png');
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -563,8 +828,6 @@ header {
     position: relative;
 }
 
-
-
 .services-list::before {
     content: " ";
     height: 80px;
@@ -572,7 +835,8 @@ header {
     background-color: #89c2f0;
     position: absolute;
     top: 30px;
-    left: -24px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .services-list__item {
@@ -607,71 +871,15 @@ header {
     background-color: rgba(137,194,240,0.5);
 }
 
-.services-list__item--roofing-materials::before {
-    content: " ";
-    height: 114px;
-    width: 114px;
-    background-image: url("../img/roof.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -142px;
-    left: 8px;
-}
-
-.services-list__item--accessories::before {
-    content: " ";
-    height: 114px;
-    width: 114px;
-    background-image: url("../img/roof_accessories.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -142px;
-    left: 8px;
-}
-
-.services-list__item--gutter-system::before {
-    content: " ";
-    height: 114px;
-    width: 114px;
-    background-image: url("../img/gutter_system.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -142px;
-    left: 8px;
-}
-
-.services-list__item--windows-and-doors::before {
-    content: " ";
-    height: 114px;
-    width: 114px;
-    background-image: url("../img/window.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -142px;
-    left: 8px;
-}
-
-.services-list__item--sps::before {
-    content: " ";
-    height: 114px;
-    width: 114px;
-    background-image: url("../img/blinds.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -142px;
-    left: 8px;
-}
-
+.services-list__item--roofing-materials::before,
+.services-list__item--accessories::before,
+.services-list__item--gutter-system::before,
+.services-list__item--windows-and-doors::before, 
+.services-list__item--sps::before, 
 .services-list__item--garage-doors::before {
     content: " ";
     height: 114px;
     width: 114px;
-    background-image: url("../img/garage_doors.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
@@ -679,6 +887,29 @@ header {
     left: 8px;
 }
 
+.services-list__item--roofing-materials::before {
+    background-image: url("../img/roof.svg");
+}
+
+.services-list__item--accessories::before {
+    background-image: url("../img/roof_accessories.svg");
+}
+
+.services-list__item--gutter-system::before {
+    background-image: url("../img/gutter_system.svg");
+}
+
+.services-list__item--windows-and-doors::before {
+    background-image: url("../img/window.svg");
+}
+
+.services-list__item--sps::before {
+    background-image: url("../img/blinds.svg");
+}
+
+.services-list__item--garage-doors::before {
+    background-image: url("../img/garage_doors.svg");
+}
 
 
 
@@ -687,24 +918,25 @@ header {
 .about-us {
     border-top: 150px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
     position: relative;
-}
-
-.about-us::after {
-    content: " ";
-    height: 670px;
-    width: 100%;
-    background-color: #89c2f0;
-    position: absolute;
-    top: 200px;
-    z-index: -1;
-}
-
-.about-us-container {
     display: flex;
     flex-direction: column;
     padding: 0 40px;
     box-sizing: border-box;
 }
+
+.about-us::after {
+    content: " ";
+    height: 73%;
+    width: 100vw;
+    background-color: #89c2f0;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
 
 .about-us__title {
     display: flex;
@@ -719,6 +951,8 @@ header {
     align-self: flex-end;
     position: relative;
     align-items: center;
+    text-align: right;
+
 }
 
 .about-us__title::before {
@@ -755,72 +989,69 @@ header {
 }
 
 .about-us__advantages--protection,
-.about-us__advantages--handshake {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: max-content;
-    margin-right: 176px;
-    align-items: center;
-}
-
+.about-us__advantages--handshake,
 .about-us__advantages--ventas,
 .about-us__advantages--checklist {
     display: flex;
     flex-wrap: wrap;
     max-width: max-content;
-    margin-left: 176px;
     align-items: center;
 }
 
-.about-us__separator--right {
-    height: 3px;
-    width: 70%;
-    background-color: #3b5998;
-    align-self: flex-end;
+.about-us__advantages--protection,
+.about-us__advantages--handshake {
+    margin-right: 176px;
 }
 
+.about-us__advantages--ventas,
+.about-us__advantages--checklist {
+    margin-left: 176px;
+}
+
+.about-us__separator--right,
 .about-us__separator--left {
     height: 3px;
     width: 70%;
     background-color: #3b5998;
+}
+
+.about-us__separator--right {
+    align-self: flex-end;
+}
+
+.about-us__separator--left {
     align-self: flex-start;
 }
 
-.about-us__advantages--protection::after {
+.about-us__advantages--protection::after,
+.about-us__advantages--ventas::before,
+.about-us__advantages--handshake::after,
+.about-us__advantages--checklist::before {
     content: " ";
     height: 146px;
     width: 146px;
-    background-image: url("../img/protection.svg");
     position: absolute;
+}
+
+.about-us__advantages--protection::after {
+    background-image: url("../img/protection.svg");
     right: -176px;
 }
 
 
 .about-us__advantages--ventas::before {
-    content: " ";
-    height: 146px;
-    width: 146px;
     background-image: url("../img/ventas.svg");
-    position: absolute;
     left: -176px;
 }
 
 .about-us__advantages--handshake::after {
-    content: " ";
-    height: 146px;
-    width: 146px;
     background-image: url("../img/handshake.svg");
-    position: absolute;
     right: -176px;
 }
 
 
 .about-us__advantages--checklist::before {
-    content: " ";
-    height: 146px;
-    width: 146px;
     background-image: url("../img/checklist.svg");
-    position: absolute;
     left: -176px;
 }
 
@@ -834,17 +1065,15 @@ header {
 
 
 
-
 /* our facilities section */
 
 .our-facilities {
     border-top: 150px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
-    height: 770px; /*set up height to show nav dots*/
+    height: 820px; /*set up height to show nav dots*/
     padding: 0 40px;
     box-sizing: border-box;
     overflow: hidden;
 }
-
 
 .our-facilities__title {
     display: flex;
@@ -859,6 +1088,7 @@ header {
     align-self: flex-start;
     position: relative;
     align-items: center;
+    text-align: left;
 }
 
 .our-facilities__title::after {
@@ -871,99 +1101,18 @@ header {
     margin-left: 30px;
 }
 
-
 /* our facilities slider */
 
-
-
-/* owl */
-
-.our-facilities .owl-stage-outer,
-.our-facilities .owl-stage {
-    height: 450px;
-}
-
-
-.owl-item,
 .our-facilities__slide {
     display: flex;
     height: 100%;
     justify-content: center;
-
 }
 
-.our-facilities .owl-prev {
-    font-size: 0 !important;
-    line-height: 0 !important;
-    position: absolute !important;
-    top: 200px !important;
-    left: 50px !important;
-    display: block !important;
-    width: 50px !important;
-    height: 50px !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    color: transparent !important;
-    outline: none !important;
-    background: transparent !important;
-    z-index: 1 !important;
-    border: 2px solid #323441 !important;
-    border-radius: 50% !important;
+.our-facilities__slide img {
+    max-width: 95%;
 }
 
-
-.our-facilities .owl-next {
-    font-size: 0 !important;
-    line-height: 0 !important;
-    position: absolute !important;
-    top: 200px !important;
-    right: 50px !important;
-    display: block !important;
-    width: 50px !important;
-    height: 50px !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    color: transparent !important;
-    outline: none !important;
-    background: transparent !important;
-    z-index: 1 !important;
-    border: 2px solid #323441 !important;
-    border-radius: 50% !important;
-}
-
-.our-facilities .owl-prev:hover,
-.our-facilities .owl-next:hover {
-    background-color: #89c2f0 !important;
-}
-
-.our-facilities .owl-prev:active,
-.our-facilities .owl-next:active {
-    background-color: rgba(137, 194, 240, 0.5) !important;
-}
-
-.our-facilities .owl-prev:before {
-    content: " ";
-    height: 30px;
-    width: 24px;
-    background-image: url("../img/arrow-previous.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    top: 8px;
-    left: 9px;
-}
-
-.our-facilities .owl-next:before {
-    content: " ";
-    height: 30px;
-    width: 24px;
-    background-image: url("../img/arrow-next.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    top: 8px;
-    right: 9px;
-}
 
 
 /* reviwes section */
@@ -987,6 +1136,7 @@ header {
     align-self: flex-end;
     position: relative;
     align-items: center;
+    text-align: right;
 }
 
 .reviews__title::before {
@@ -1022,19 +1172,12 @@ header {
 
 /* reviews slider */
 
-
-
-.reviews .owl-stage-outer,
-.reviews .owl-stage {
-    height: 400px;
-}
-
-
-
 .reviews-card {
+    display: flex;
+    justify-content: center;
     border: 2px solid #323441;
     height: 300px;
-    width: 110% !important;
+    width: 99% !important;
     box-sizing: border-box;
     padding: 0px 20px 20px 20px;
     border-radius: 5px;
@@ -1049,8 +1192,9 @@ header {
     border: 2px solid #323441;
     border-radius: 50%;
     position: absolute;
-    top: -77px;
-    left: 273px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .reviews__avatar {
@@ -1059,8 +1203,9 @@ header {
     min-height: 150px;
     min-width: 150px;
     position: absolute;
-    top: -75px;
-    left: 275px;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
 }
 
 .reviews__description {
@@ -1090,36 +1235,30 @@ header {
     color: #323441;
 }
 
-.reviews .owl-nav {
-    display: none;
-}
 
 
 /* promo, news, articles section */
 
 .news {
+    padding: 0 40px;
+    box-sizing: border-box;
     margin-top: 100px;
     position: relative;
 }
 
 .news::after {
     content: " ";
-    height: 320px;
-    width: 100%;
-    background-color: #89c2f0;
+    width: 0;
+    height: 40%;
+    border-right: 100vw solid #89c2f0;
+    border-bottom: 60px solid transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
     position: absolute;
-    z-index: -2;
     top: 250px;
-}
-
-.news::before {
-    content: "";
-    width: 100%;
-    height: 64px;
-    background: linear-gradient(to right top, #f2efed 50%, transparent 50%);
-    position: absolute;
-    z-index: -1;
-    top: 506px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
 }
 
 .news__title {
@@ -1135,6 +1274,7 @@ header {
     align-self: flex-start;
     position: relative;
     align-items: center;
+    text-align: left;
 }
 
 .news__title::after {
@@ -1153,8 +1293,6 @@ header {
 
 .news__list-main {
     margin: 0;
-    padding: 0 20px;
-    box-sizing: border-box;
     width: 100%;
     display: flex;
 }
@@ -1168,7 +1306,6 @@ header {
     margin: 0;
     padding: 20px;
 }
-
 
 .news__news-img-left img {
     max-width: 100%;
@@ -1252,17 +1389,17 @@ header {
 }
 
 
+
 /* our team section */
 
 .our-team {
     border-top: 150px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
-    padding: 0 20px;
+    padding: 0 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     position: relative;
 }
-
 
 .our-team__title {
     display: flex;
@@ -1277,6 +1414,7 @@ header {
     align-self: flex-end;
     position: relative;
     align-items: center;
+    text-align: right;
 }
 
 .our-team__title::before {
@@ -1293,11 +1431,11 @@ header {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .our-team__manager-card {
-    width: 290px;
+    width: 32%;
     background-color: #89c2f0;
     display: flex;
     flex-direction: column;
@@ -1308,8 +1446,7 @@ header {
 
 .our-team__manager-card img {
     border-radius: 5px;
-    height: 276px;
-    width: 276px;
+    width: 99%;
     align-self: center;
 }
 
@@ -1360,6 +1497,10 @@ header {
 /* contacts section */
 
 
+.contacts {
+    position: relative;
+}
+
 .contacts__box {
     display: flex;
     flex-direction: column;
@@ -1391,6 +1532,11 @@ header {
     font-size: 18px;
     line-height: 24px;
     color: #f2efed;
+}
+
+.contacts iframe {
+    height: 400px;
+    width: 100%;
 }
 
 .contacts__address {
@@ -1443,7 +1589,6 @@ header {
 
 
 
-
 /* footer */
 
 .main-footer {
@@ -1459,9 +1604,6 @@ header {
     align-items: center;
 }
 
-.main-footer__container img {
-    margin: 0;
-}
 
 .main-footer__social {
     display: flex;
@@ -1481,54 +1623,37 @@ header {
     font-size: 0;
 }
 
-.main-footer__telephone::before {
-    content: " ";
-    height: 52px;
-    width: 52px;
-    background-image: url("../img/telephone-icon.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.main-footer__mail::before {
-    content: " ";
-    height: 52px;
-    width: 52px;
-    background-image: url("../img/email-icon.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.main-footer__facebook::before {
-    content: " ";
-    height: 52px;
-    width: 52px;
-    background-image: url("../img/facebook-icon.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.main-footer__instagram::before {
-    content: " ";
-    height: 52px;
-    width: 52px;
-    background-image: url("../img/instagram-icon.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
+.main-footer__telephone::before,
+.main-footer__mail::before,
+.main-footer__facebook::before,
+.main-footer__instagram::before,
 .main-footer__youtube::before {
     content: " ";
     height: 52px;
     width: 52px;
-    background-image: url("../img/youtube-icon.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
+}
+
+.main-footer__telephone::before {
+    background-image: url("../img/telephone-icon.svg");
+}
+
+.main-footer__mail::before {
+    background-image: url("../img/email-icon.svg");
+}
+
+.main-footer__facebook::before {
+    background-image: url("../img/facebook-icon.svg");
+}
+
+.main-footer__instagram::before {
+    background-image: url("../img/instagram-icon.svg");
+}
+
+.main-footer__youtube::before {
+    background-image: url("../img/youtube-icon.svg");
 }
 
 .main-footer__policy {
@@ -1547,8 +1672,6 @@ header {
     justify-content: center;
 }
 
-
-
 .pop-up__overlay {
     position: fixed;
     top: 0;
@@ -1558,6 +1681,31 @@ header {
     background-color: rgba(50,52,65,0.5);
     z-index: 2;
 }
+
+.pop-up--download::after,
+.pop-up--calculation::after,
+.pop-up--callback::after {
+    content: '';
+    background-image: url('../img/wait.gif');
+    background-repeat: no-repeat;
+    background-color: #e7dfdd;
+    background-position: 50% 50%;
+    opacity: 0.9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.pop-up--download.__active::after,
+.pop-up--calculation.__active::after,
+.pop-up--callback.__active::after {
+    display: block;
+}
+
+
 
 /* pop-up download */
 
@@ -1571,7 +1719,7 @@ header {
     top: 20%;
     width: 550px;
     left: 50%;
-    margin-left: -275px;
+    transform: translateX(-50%);
     background-color: #f2efed;
     z-index: 3;
     display: none;
@@ -1807,14 +1955,14 @@ header {
 }
 
 .pop-up__close--download {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 35px;
+    right: 20px;
 }
 
 .pop-up__close--download:active,
@@ -1829,6 +1977,7 @@ header {
     position: absolute;
     height: 2px;
     width: 24px;
+    left: 0;
     background-color: #323441;
 }
 
@@ -1855,8 +2004,6 @@ header {
 
 
 
-
-
 /* pop up calculation */
 
 .pop-up--calculation {
@@ -1869,7 +2016,7 @@ header {
     top: 20%;
     width: 550px;
     left: 50%;
-    margin-left: -275px;
+    transform: translateX(-50%);
     background-color: #f2efed;
     z-index: 3;
     display: none;
@@ -2105,14 +2252,14 @@ header {
 }
 
 .pop-up__close--calculation {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 35px;
+    right: 20px;
 }
 
 .pop-up__close--calculation:active,
@@ -2127,6 +2274,7 @@ header {
     position: absolute;
     height: 2px;
     width: 24px;
+    left: 0;
     background-color: #323441;
 }
 
@@ -2152,6 +2300,7 @@ header {
 }
 
 
+
 /* pop up callback */
 
 .pop-up--callback {
@@ -2164,7 +2313,7 @@ header {
     top: 20%;
     width: 550px;
     left: 50%;
-    margin-left: -275px;
+    transform: translateX(-50%);
     background-color: #f2efed;
     z-index: 3;
     display: none;
@@ -2401,14 +2550,14 @@ header {
 }
 
 .pop-up__close--callback {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 35px;
+    right: 20px;
 }
 
 .pop-up__close--callback:active,
@@ -2423,6 +2572,7 @@ header {
     position: absolute;
     height: 2px;
     width: 24px;
+    left: 0;
     background-color: #323441;
 }
 
@@ -2452,8 +2602,8 @@ header {
 
 /* inner pages */
 
-.inner-page__container {
-    margin-top: 20px;
+.inner-page__container.wrapper {
+    margin-top: 140px;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -2510,7 +2660,6 @@ header {
     opacity: 0.5;
 }
 
-
 /* inner page content */
 
 .inner-page__content {
@@ -2556,11 +2705,6 @@ header {
 
 /* inner page content box */
 
-/* setup slider height in inner pages */
-.inner-page__container .fotorama__stage.fotorama__pointer {
-    height: 510px !important;
-}
-
 .inner-page__content-slide {
     margin: 0;
     padding: 0;
@@ -2574,8 +2718,8 @@ header {
 }
 
 .inner-page__image-container {
-    height: 460px;
-    width: 460px;
+    height: auto;
+    width: 98%;
     background-color: #ffffff;
     box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
     display: flex;
@@ -2583,13 +2727,16 @@ header {
     justify-content: center;
 }
 
-.inner-page__image-container img{
-    max-width: 100%;
-    max-height: 100%;
+.inner-page__image-container::after {  /*needed for image container height and width 1:1*/
+    content: '';
+    display: block;
+    padding-top: 100%;
 }
 
-
-
+.inner-page__image-container img{
+    max-height: 470px;
+    max-width: 100%;
+}
 
 /* inner slides description */
 
@@ -2633,6 +2780,7 @@ header {
 .inner-page__slide-table-data--left {
     margin: 0;
     padding: 0;
+    margin-right: 10px;
     font-family: 'pf_dintext_prolight', Arial, sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -2652,7 +2800,8 @@ header {
     text-align: right;
 }
 
-.inner-page__slide-table-row:nth-child(n+2):before {
+.inner-page__slide-table-row:nth-child(n+2):before,
+.inner-page__slide-table-row:nth-child(n+2):after {
     content: " ";
     height: 1px;
     width: 20px;
@@ -2665,15 +2814,7 @@ header {
 }
 
 .inner-page__slide-table-row:nth-child(n+2):after {
-    content: " ";
-    height: 1px;
-    width: 20px;
-    background: #323441;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: absolute;
     right: 0;
-    top: -10px;
 }
 
 .inner-page__content .fotorama__thumb {
@@ -2693,6 +2834,7 @@ header {
 .main-footer.inner-page__footer {
     margin-top: 100px;
 }
+
 
 
 /* accessories */
@@ -2733,6 +2875,11 @@ header {
     grid-column-gap: 10px;
     grid-row-gap: 30px;
 }
+
+.inner-page__content-item {
+    justify-self: center;
+}
+
 
 
 /* gutter system page */
@@ -2844,6 +2991,8 @@ header {
     background-color: #f1f0ea;
 }
 
+
+
 /* news page */
 
 .news__list {
@@ -2868,7 +3017,6 @@ header {
 }
 
 .news__image-box {
-    min-height: 240px;
     min-width: 420px;
     max-height: 240px;
     max-width: 420px;
@@ -2895,6 +3043,8 @@ header {
     color: inherit;
 }
 
+
+
 /* cooperation page */
 
 .cooperation-description {
@@ -2913,7 +3063,6 @@ header {
 .cooperation-form {
     width: 100%;
 }
-
 
 .pop-up__your-name-field--cooperation,
 .pop-up__your-telephone-field--cooperation {
@@ -2970,12 +3119,14 @@ header {
     cursor: pointer;
 }
 
+
+
 /* privacy policy page */
 
 .privacy-policy {
     margin: 0;
     padding: 0;
-    margin: 40px 20px 0 20px;
+    margin: 40px 5px 0 20px;
     font-family: 'pf_dintext_proregular', Arial, sans-serif;
     font-size: 20px;
     line-height: 30px;
@@ -2985,6 +3136,7 @@ header {
 }
 
 .privacy-policy-paragraph {
+    display: inline-block;
     margin: 0;
     padding: 0;
     margin: 40px 20px 0 20px;
@@ -2994,6 +3146,8 @@ header {
     color: #323441;
     text-align: justify;
 }
+
+
 
 /* error page */
 
@@ -3013,30 +3167,29 @@ header {
     color: #323441;
 }
 
+
+
 /* landing pages */
+
+.landing-blindes,
+.landing-windows,
+.landing-roof {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .landing-blindes {
     background-image: url("../img/landing/Blindes.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
 }
 
 .landing-windows {
     background-image: url("../img/landing/Windows.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
 }
 
 .landing-roof {
     background-image: url("../img/landing/Roof.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
 }
 
 .landing__header {
@@ -3111,10 +3264,12 @@ header {
     display: flex;
     flex-direction: column;
     background-color: rgba(242, 239, 237, 0.9);
-    margin-top: 5px;
+    margin-top: 125px;
     padding: 40px 40px;
     align-items: center;
 }
+
+
 
 /* articles */
 
@@ -3201,3 +3356,1623 @@ header {
     outline-width: 0;
 }
 
+
+
+@media (max-width: 1000px) {
+
+    .inner-page__container.wrapper {
+        margin-top: 120px;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-logo {
+        height: 56px;
+        width: 68px;
+    }    
+
+    .header-navigation__item {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .header-navigation__list li:nth-child(n+2) {
+        padding-left: 11px;
+    }
+    
+    .header-navigation__list li:nth-child(n+2):hover {
+        padding-left: 10px;
+    }
+    
+    .header-navigation__list li:nth-last-child(n+2) {
+        padding-right: 11px;
+    }
+    
+    .header-navigation__list li:nth-last-child(n+2):hover {
+        padding-right: 10px;
+    }
+
+    .header-navigation__phone {
+        padding-top: 12px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .header-navigation__phone::before {
+        height: 22px;
+        width: 22px;
+    }
+    
+    .service-panel__item:nth-child(2n) {
+        margin: 0 20px;
+    }
+
+    .service-panel__item--callback::before,
+    .service-panel__item--calculation::before,
+    .service-panel__item--download-catalog::before {
+        height: 50px;
+        width: 50px;
+        top: 0;
+    }
+    
+    .carousel::before {
+        min-width: 1200px;
+    }
+
+    .top-slides__title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .top-slides__table-data--left {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+    .top-slides__table-data--right {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .fotorama__arr,
+    .carousel .fotorama__arr {
+        width: 40px;
+        background-color: transparent !important;
+    }
+    
+    .carousel .fotorama__nav--dots {
+        right: -140px;
+    }
+    
+    .carousel .fotorama__nav__frame--dot {
+        margin-left: 60px !important;
+    }
+
+    
+    .carousel::after {
+        height: 110%;
+    }
+
+    .service-panel {
+        width: 100%;
+    }
+
+    .service-panel__item {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 170px;
+        justify-items: center;
+    }
+    
+    .services-list::before {
+        height: 310px;
+        background: linear-gradient(to bottom, #89c2f0 26%, transparent 26%, transparent 75%, #89c2f0 75%);
+        top: 26px;
+        width: 90%;
+    }
+
+    .our-facilities {
+        height: 670px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 350px !important;
+    }
+
+    .reviews {
+        margin-top: 100px;
+    }
+
+    .reviews__avatar {
+        max-height: 120px;
+        max-width: 120px;
+        min-height: 120px;
+        min-width: 120px;
+    }
+
+    .reviews-card::before {
+        height: 121px;
+        width: 121px;
+    }
+    
+
+    .news__list-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news__colomn-left,
+    .news__colomn-right {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .news__news-title-left {
+        flex-direction: column;
+    }
+
+    .news__news-title-right {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .news__data-right {
+        flex-direction: column;
+    }
+
+    .news__news-img-right {
+        min-width: 100%;
+        max-height: 100%;
+    }
+
+    .our-team__manager-telephone {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .main-footer__container {
+        flex-direction: column;
+    }
+    .main-footer__container a {
+        order: 2;
+    }
+    .main-footer__social {
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .inner-page__title {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .inner-page__content-title {
+        font-size: 68px;
+        line-height: 82px;
+    }
+    .inner-page__breadcrumbs {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .inner-page__slide-title {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .inner-page__slide-table-data--left {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .inner-page__slide-table-data--right {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .inner-page__content-bar {
+        height: 165px;
+        width: 165px;
+    }
+
+    .inner-page__content-bar-title {
+        max-width: 165px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .news__list {
+        padding: 0 10px;
+    }
+
+    .news__link {
+        flex-direction: column;
+    }
+
+    .news__item,
+    .news__link,
+    .news__image-box {
+        min-width: 100%;
+        max-width: 100%;    
+    }
+
+    .news__image-box {
+        max-height: 450px;
+    }
+
+    .news__image-box img {
+        width: 100%;
+    }
+
+    .news__item {
+        background: none;
+    }
+
+    .news__inner-title,
+    .news__inner-title h3  {
+        margin: 10px 0 0 0;
+    }
+
+    .news__inner-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .news__inner-title span {
+        font-family: 'pf_dintext_promedium', Arial, sans-serif;
+    }
+
+    .article__image-container img {
+        height: 100%;
+        width: auto;
+    }
+
+    .landing__container {
+        margin-top: 110px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .services-list::before {
+        width: 95%;
+    }
+
+    .our-team__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-team__manager-card {
+        width: 40%;
+    }
+
+    .our-team__manager-card:nth-child(n) {
+        margin-top: 20px;
+    }
+
+    .inner-page__image-container img {
+        max-height: 356px;
+        max-width: 100%;
+    }
+
+    .inner-page__content-title {
+        margin: 0;
+        font-size: 56px;
+        line-height: 67px;
+    }
+    .inner-page__content-title--landing {
+        padding: 0px 10px 0 10px;
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    .inner-page__content-title--landing::before,
+    .inner-page__content-title--landing::after {
+        min-width: 20px;
+    }
+    
+    .inner-page__content-title--landing::before {
+        margin-right: 5px;
+    }
+    
+    .inner-page__content-title--landing::after {
+        margin-left: 5px;
+    }
+    
+    .landing__container {
+        padding: 20px 20px;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 400px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 460px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 380px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 460px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 410px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 400px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 400px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 400px !important;
+    }
+}
+
+
+
+@media (max-width: 710px) {
+
+    .service-panel {
+        height: auto;
+    }
+
+    .service-panel .wrapper {
+        padding: 0 20px;
+    }
+
+    .service-panel__item {
+        font-family: 'pf_dintext_promedium', Arial, sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .service-panel__item {
+        padding: 5px 10px 5px 35px;
+    }
+
+    .service-panel__item:nth-child(2n) {
+        margin: 0 10px;
+    }
+
+    .service-panel__item--callback::before,
+    .service-panel__item--calculation::before,
+    .service-panel__item--download-catalog::before {
+        height: 35px;
+        width: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header-navigation__list {
+        flex-wrap: wrap;
+    }
+
+    .header-navigation__item {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .header-navigation__list li:nth-child(n+2) {
+        padding-left: 6px;
+    }
+    
+    .header-navigation__list li:nth-child(n+2):hover {
+        padding-left: 5px;
+    }
+    
+    .header-navigation__list li:nth-last-child(n+2) {
+        padding-right: 6px;
+    }
+    
+    .header-navigation__list li:nth-last-child(n+2):hover {
+        padding-right: 5px;
+    }
+
+    .top-slides__title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+
+    .carousel .fotorama__nav--dots {
+        position: relative !important;
+        top: -50px;
+        right: 20px;
+    }
+
+    .our-facilities {
+        height: 580px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 260px !important;
+    }
+
+    .contacts {
+        padding-top: 340px;
+    }
+    
+    .contacts__box {
+        margin: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .inner-page__content-slide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-page__image-container img {
+        max-height: 620px;
+        max-width: 100%;
+    }
+
+    .inner-page__content-image,
+    .inner-page__content-description {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .inner-page__slide-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inner-page__content-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 1000px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 930px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 930px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 930px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 1050px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 930px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 1050px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 970px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 970px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 940px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 920px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 950px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 950px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 990px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 910px !important;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+
+    .carousel .fotorama{
+        margin: 0 10px;
+    }
+
+
+    .top-slides {
+        flex-direction: column;
+    }
+
+    .top-slides__image {
+        width: 100%;
+    }
+
+    .top-slides__description { 
+        margin: 0;
+        width: 100%;
+    }
+    
+    .carousel .fotorama__stage {
+        height: 900px !important;
+    }
+
+    .top-slides__title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .top-slides__table {
+        margin-top: 20px;
+    }
+
+    .top-slides__table-row:nth-last-child(n+2) {
+        margin-bottom: 31px;
+    }
+
+    .top-slides__table-row:nth-child(n+2):before,
+    .top-slides__table-row:nth-child(n+2):after {
+        top: -15px;
+    }
+    
+    .fotorama__arr--prev,
+    .carousel .fotorama__arr--prev,
+    .fotorama__arr--next,
+    .carousel .fotorama__arr--next {
+        opacity: 0.5;
+        
+    }
+
+    .carousel .fotorama__nav__shaft {
+        height: 50px !important;
+    }
+    
+    .carousel .fotorama__nav--dots {
+        position: relative !important;
+        top: -50px;
+        right: 20px;
+    }
+    
+    .carousel .fotorama__nav__frame--dot {
+        margin-left: 30px !important;
+    }
+
+    .services.wrapper {
+        padding: 0 10px;
+    }
+
+    .about-us {
+        border-top: 100px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
+        padding: 0 10px;
+    }
+
+    .about-us::after {
+        height: 83%;
+        top: 230px;
+    }
+
+    .about-us__title,
+    .our-facilities__title,
+    .reviews__title,
+    .news__title,
+    .our-team__title {
+        font-size: 46px;
+        line-height: 55px;
+    }
+
+    .about-us__advantages--protection,
+    .about-us__advantages--ventas,
+    .about-us__advantages--handshake,
+    .about-us__advantages--checklist {
+        padding-top: 200px;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .about-us__advantages em {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    .about-us__advantages--protection::after,
+    .about-us__advantages--ventas::before,
+    .about-us__advantages--handshake::after,
+    .about-us__advantages--checklist::before {
+        height: 200px;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+
+    .our-team__manager-card {
+        width: 50%;
+    }
+
+    .inner-page__content-title {
+        margin: 0;
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 960px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 900px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 890px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 890px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 1010px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 890px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 1000px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 940px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 920px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 900px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 860px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 860px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 880px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 990px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 900px !important;
+    }
+}
+
+
+
+@media (max-width: 580px) {
+
+    .services-list::before {
+        width: 99%;
+    }
+
+    .our-facilities {
+        height: 545px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 240px !important;
+    }
+
+    .reviews .fotorama__stage {
+        height: 500px !important;
+    }
+
+    .reviews-card {
+        height: 400px;
+    }
+
+    .our-team__manager-card {
+        width: 60%;
+    }
+
+    .inner-page__content-title {
+        margin: 0;
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .inner-page__content-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 900px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 820px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 820px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 820px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 950px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 840px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 940px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 850px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 850px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 810px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 770px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 770px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 810px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 890px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 830px !important;
+    }
+
+    .inner-page__image-container img {
+        max-height: 529px;
+        max-width: 100%;
+    }
+}
+
+
+
+@media (max-width: 475px) {
+
+    .services-list::before {
+        width: 101%;
+    }
+
+    .our-team__manager-card {
+        width: 70%;
+    }
+
+    .our-facilities {
+        height: 515px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 210px !important;
+    }
+
+    .inner-page__image-container img {
+        max-height: 426px;
+        max-width: 100%;
+    }
+
+    .landing__container {
+        padding: 10px 10px;
+    }
+    
+    .pop-up--callback,
+    .pop-up--calculation,
+    .pop-up--download {
+        padding: 15px 10px;
+        top: 5%;
+        width: 320px;
+    }
+    
+    .pop-up__title--callback,
+    .pop-up__title--calculation,
+    .pop-up__title--download {
+        margin-top: 25px;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .pop-up__description--callback,
+    .pop-up__description--calculation,
+    .pop-up__description--download {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    .pop-up__interest--callback,
+    .pop-up__interest--calculation,
+    .pop-up__interest--download {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    .pop-up__service-list--callback,
+    .pop-up__service-list--calculation,
+    .pop-up__service-list--download {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 85px;
+        justify-items: center;
+        margin-top: 85px;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 800px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 760px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 720px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 720px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 850px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 740px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 840px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 750px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 800px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 800px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 750px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 770px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 720px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 790px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 730px !important;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .service-panel .wrapper {
+        padding: 0 10px;
+    }
+
+    .header.wrapper {
+        padding: 5px 10px 0 10px;
+    }
+
+    .header.wrapper::after {
+        bottom: 10px;
+    }
+
+    .navigation-container {
+        height: 45px;
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .main-logo {
+        height: 45px;
+        width: 55px;
+    }
+    
+    .header-navigation__phone {
+        bottom: 12px;
+    }
+    
+    .header-navigation__phone::before {
+        height: 18px;
+        width: 18px;
+        left: -20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-navigation__list {
+        margin: 0;
+        padding: 0;
+        display: block;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+    }
+
+    .header-navigation__list::before {
+        content: '';
+        display: none;
+        background: rgba(0, 0, 0, .5);
+        height: 100vh;
+        left: -10px;
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        transition: all .3s;
+    }
+
+    .header-navigation__list li {
+        padding: 0;
+        border-bottom: 1px solid #f2efed;
+        display: none;
+        transform: translateY(-20px);
+        transition: all .3s;
+    }
+
+    .header-navigation__list li:nth-child(n+2),
+    .header-navigation__list li:nth-child(n+2):hover,
+    .header-navigation__list li:nth-last-child(n+2),
+    .header-navigation__list li:nth-last-child(n+2):hover {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-navigation__item {
+        padding: 12px 20px;
+        box-sizing: border-box;
+        backdrop-filter: blur(16px);
+        background: rgba(50,52,65,0.9);
+        display: block;
+        font-size: 18px;
+        text-align: left;
+        width: 100%;
+        transition: all .3s;
+    }
+
+    label.hamburger {
+        border: 4px solid #89c2f0;
+        border-left: 0 solid transparent;
+        border-right: 0 solid transparent;
+        cursor: pointer;
+        display: block;
+        height: 25px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        width: 40px;
+        transition: all .2s;
+    }
+
+    label.hamburger::before {
+        background: #89c2f0;
+        content: '';
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: 10px;
+        width: 30px;
+        transition: all .2s;
+    }
+
+    label.hamburger::after {
+        display: none;
+        background: #89c2f0;
+        content: '';
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: 6px;
+        width: 100%;
+        transform: rotate(90deg);
+        transition: all .2s;
+    }
+
+    input.hamburger[type="checkbox"]:checked + label.hamburger {
+        border: 4px solid #89c2f0;
+        border-radius: 50%;
+        height: 28px;
+        top: 16px;
+        left: 18px;
+        width: 28px;
+        transform: rotate(-135deg);
+    }
+
+    input.hamburger[type="checkbox"]:checked + label.hamburger::before {
+        background: #89c2f0;
+        top: 12px;
+        left: 8px;
+        width: 12px;
+    }
+
+    input.hamburger[type="checkbox"]:checked + label.hamburger::after {
+        display: block;
+        background: #89c2f0;
+        top: 12px;
+        left: 8px;
+        width: 12px;
+    }
+
+    input.hamburger[type="checkbox"]:checked ~ .header-navigation__list::before {
+        display: block;
+    }
+
+    input.hamburger[type="checkbox"]:checked ~ .header-navigation__list li {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .service-panel__item {
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .service-panel__item {
+        padding: 5px 5px 5px 25px;
+    }
+
+    .service-panel__item:nth-child(2n) {
+        margin: 0 5px;
+    }
+
+    .service-panel__item--callback::before,
+    .service-panel__item--calculation::before,
+    .service-panel__item--download-catalog::before {
+        height: 25px;
+        width: 25px;
+    }
+
+    .carousel .fotorama__stage {
+        height: 740px !important;
+    }
+   
+    .services.wrapper {
+        padding: 0 10px;
+        border-top: 100px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
+    }
+
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-list::before {
+        height: 545px;
+        background: linear-gradient(to bottom, #89c2f0 15%, transparent 15%, transparent 43%, #89c2f0 43%, #89c2f0 58%, transparent 58%, transparent 86%, #89c2f0 86%);
+        left: 50%;
+        width: 95%;
+    }
+
+    .about-us::after {
+        height: 80%;
+        top: 290px;
+    }
+
+    .our-facilities {
+        padding: 0 10px;
+        border-top: 100px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
+    }
+
+    .our-facilities {
+        height: 460px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 200px !important;
+    }
+
+    .reviews {
+        margin-top: 100px;
+    }
+
+    .reviews .fotorama__stage {
+        height: 500px !important;
+    }
+
+    .reviews-card {
+        height: 400px;
+    }
+
+    .reviews {
+        padding: 0 10px;
+    }
+
+    .reviews__button {
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    .news {
+        padding: 0 10px;
+    }
+
+    .our-team {
+        padding: 0 10px;
+        border-top: 100px solid transparent; /*needed for smooth scroll and scroll spy correct work*/
+    }
+
+    .our-team__manager-card {
+        width: 80%;
+    }
+
+    .our-team__separator {
+        
+        width: 60%;
+    }
+    
+    .main-footer {
+        background-color: #323441;
+    }
+
+    .main-footer__social {
+        margin-left: 5px;
+    }
+
+    .main-footer__telephone::before,
+    .main-footer__mail::before,
+    .main-footer__facebook::before,
+    .main-footer__instagram::before,
+    .main-footer__youtube::before,
+    .main-footer__telephone,
+    .main-footer__mail,
+    .main-footer__facebook,
+    .main-footer__instagram,
+    .main-footer__youtube {
+        margin-left: 19px !important;
+        width: 40px;
+    }
+
+    .inner-page__title {
+        margin: 0;
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .inner-page__breadcrumbs {
+        margin: 20px 0 0 0;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .inner-page__breadcrumbs-item:nth-child(n+2) {
+        margin-left: 25px;
+    }
+
+    .inner-page__breadcrumbs-item:nth-last-child(n+2)::after {
+        top: 6px;
+        right: -15px;
+    }
+
+    .inner-page__content-title {
+        margin: 0;
+        font-size: 42px;
+        line-height: 50px;
+    }
+    
+    .inner-page__content-title::before,
+    .inner-page__content-title::after {
+        min-width: 10px;
+    }
+    
+    .inner-page__content-title::before {
+        margin-right: 10px;
+    }
+    
+    .inner-page__content-title::after {
+        margin-left: 10px;
+    }
+
+
+    .inner-page__content-bar {
+        height: 150px;
+        width: 150px;
+    }
+
+    .inner-page__container.wrapper {
+        margin-top: 105px;
+        padding: 0 10px;
+    }
+
+    .landing__container {
+        margin-top: 90px;
+    }
+
+    .privacy-policy-paragraph {
+        margin: 20px 20px 0 20px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .main-footer,
+    .main-footer.inner-page__footer {
+        padding-bottom: 30px;
+    }
+
+    .news__image-box {
+        max-height: 150px;
+    }
+
+    .article__title,
+    .article__date {
+        margin-left: 10px;
+    }
+
+    .article__title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .article__date {
+        font-family: 'pf_dintext_promedium', Arial, sans-serif;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .cooperation-description {
+        margin: 20px 0 0 0;
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 760px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 730px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 690px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 690px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 830px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 710px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 810px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 720px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 760px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 700px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 640px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 650px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 700px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 760px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 700px !important;
+    
+}
+
+
+
+@media (max-width: 380px) {
+
+    .carousel .fotorama__stage {
+        height: 700px !important;
+    }
+    
+    .reviews .fotorama__stage {
+        height: 570px !important;
+    }
+
+    .reviews-card {
+        height: 470px;
+    }
+
+    .our-facilities {
+        height: 480px;
+    }
+
+    .our-facilities .fotorama__stage {
+        height: 160px !important;
+    }
+
+    .inner-page__content-title--word-break {
+        word-break: break-all;
+    }
+    
+    .inner-page__image-container img {
+        max-height: 347px;
+        max-width: 100%;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 710px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 680px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 640px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 680px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 770px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 660px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 760px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 670px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 710px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 650px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 590px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 600px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 650px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 710px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 650px !important;
+    }
+}
+
+
+
+@media (max-width: 340px) {
+
+    .carousel .fotorama__stage {
+        height: 640px !important;
+    }
+
+    .services-list::before {
+        width: 105%;
+    }
+
+    .inner-page__image-container img {
+        max-height: 294px;
+        max-width: 100%;
+    }
+
+    #roofing-materials-slider-1 .fotorama__stage {
+        height: 710px !important;
+    }
+
+    #roofing-materials-slider-2 .fotorama__stage {
+        height: 650px !important;
+    }
+
+    #roofing-materials-slider-3 .fotorama__stage {
+        height: 600px !important;
+    }
+
+    #roofing-materials-slider-4 .fotorama__stage {
+        height: 640px !important;
+    }
+    
+    #gutter-system-slider-1 .fotorama__stage {
+        height: 720px !important;
+    }
+
+    #gutter-system-slider-2 .fotorama__stage {
+        height: 610px !important;
+    }
+
+    #windows-and-doors-slider-1 .fotorama__stage {
+        height: 700px !important;
+    }
+
+    #windows-and-doors-slider-2 .fotorama__stage {
+        height: 620px !important;
+    }
+
+    #windows-and-doors-slider-3 .fotorama__stage {
+        height: 620px !important;
+    }
+
+    #sps-slider-1 .fotorama__stage {
+        height: 600px !important;
+    }
+
+    #sps-slider-2 .fotorama__stage {
+        height: 540px !important;
+    }
+
+    #sps-slider-3 .fotorama__stage {
+        height: 600px !important;
+    }
+
+    #sps-slider-4 .fotorama__stage {
+        height: 600px !important;
+    }
+
+    #garage-doors-1 .fotorama__stage {
+        height: 680px !important;
+    }
+    
+    #garage-doors-2 .fotorama__stage {
+        height: 650px !important;
+    }
+}

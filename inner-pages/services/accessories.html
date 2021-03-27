@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аксесуари | odk.com.ua</title>
     <link rel="icon" type="image/png" href="../../favicon.png">
-    <link rel="stylesheet" href="../../css/fotorama.dev.css"> 
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preload" href="../../fonts/pfdintextpro-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/pfdintextpro-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/pfdintextpro-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/pfdintextpro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/pfdintextpro-xblack-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../css/fotorama.dev.css"> 
 </head>
 <body>
     <header id="odk">
@@ -15,10 +20,12 @@
             <div class="header wrapper">
                 <div class="navigation-container">
                     <a href="../../index.html">
-                        <img class="main-logo" src="../../img/logo_ODK.svg" alt="Логотип 'ODK'">
+                        <img class="main-logo" src="../../img/logo_ODK.png" alt="Логотип 'ODK'">
                     </a>
                     <nav class="header-navigation">
-                        <ul class="header-navigation__list">
+                        <input class="hamburger visually-hidden" type="checkbox" name="hamburger" id="hamburger">
+                        <label class="hamburger" for="hamburger"></label>
+                        <ul class="header-navigation__list" onclick="uncheck()">
                             <li><a class="header-navigation__item" href="../../index.html#odk">ODK</a></li>
                             <li><a class="header-navigation__item header-navigation__item--active" href="../../index.html#services">Каталог</a></li>
                             <li><a class="header-navigation__item" href="../../index.html#about-us">Про нас</a></li>
@@ -33,9 +40,9 @@
         </div>
         <div class="service-panel">
             <div class="wrapper">
-                <a class="service-panel__item service-panel__item--callback" href="#">Передзвоніть<br>мені</a>
-                <a class="service-panel__item service-panel__item--calculation" href="#">Замовити безкоштовний<br>замір та прорахунок</a>
-                <a class="service-panel__item service-panel__item--download-catalog" href="#">Завантажити<br>каталог</a>
+                <a class="service-panel__item service-panel__item--callback" href="../landing/roof.html">Передзвоніть мені</a>
+                <a class="service-panel__item service-panel__item--calculation" href="../landing/roof.html">Замовити безкоштовний замір та прорахунок</a>
+                <a class="service-panel__item service-panel__item--download-catalog" href="../landing/roof.html">Завантажити каталог</a>
             </div>
         </div>
     </header>
@@ -256,7 +263,7 @@
     <footer class="main-footer inner-page__footer">
         <div class="main-footer__container wrapper">
             <a href="#">
-                <img class="main-logo" src="../../img/logo_ODK.svg" alt="Логотип 'ODK'">
+                <img class="main-logo" src="../../img/logo_ODK.png" alt="Логотип 'ODK'">
             </a>
             <div class="main-footer__social">
                 <a class="main-footer__telephone" href="tel:+380506114689">+380506114689</a>
@@ -271,9 +278,9 @@
         </span>
     </footer>
     <section class="pop-up--callback">
-        <span class="pop-up__title--callback">Замовити зворотній дзвінок</span>
+        <h3 class="pop-up__title--callback">Замовити зворотній дзвінок</h3>
         <p class="pop-up__description--callback">Заповніть форму, для замовлення зворотнього дзвінка</p>
-        <form class="pop-up__form--callback" action="" method="POST">
+        <form class="pop-up__form--callback" id="form-callback" method="POST" enctype="multipart/form-data" onsubmit="send(event, '../../php/send-callback.php', 'form-callback')">
             <input class="pop-up__your-name-field--callback" type="text" name="name--callback" id="your-name--callback" placeholder="Ваше ім'я" required>
             <input class="pop-up__your-telephone-field--callback" type="tel" name="telephone--callback" id="your-telephone--callback" placeholder="+38 (___) ___ __ __" required>
             <span class="pop-up__interest--callback">Що Вас цікавить?</span>
@@ -308,9 +315,9 @@
         <button class="pop-up__close--callback"></button>
     </section>
     <section class="pop-up--calculation">
-        <span class="pop-up__title--calculation">Замовити безкоштовний замір та розрахунок</span>
+        <h3 class="pop-up__title--calculation">Замовити безкоштовний замір та розрахунок</h3>
         <p class="pop-up__description--calculation">Заповніть форму, для замовлення безкоштовного заміру та розрахунку</p>
-        <form class="pop-up__form--calculation" action="" method="POST">
+        <form class="pop-up__form--calculation" id="form-calculation" method="POST" enctype="multipart/form-data" onsubmit="send(event, '../../php/send-calculation.php', 'form-calculation')">
             <input class="pop-up__your-name-field--calculation" type="text" name="name--calculation" id="your-name--calculation" placeholder="Ваше ім'я" required>
             <input class="pop-up__your-telephone-field--calculation" type="tel" name="telephone--calculation" id="your-telephone--calculation" placeholder="+38 (___) ___ __ __" required>
             <span class="pop-up__interest--calculation">Що Вас цікавить?</span>
@@ -345,9 +352,9 @@
         <button class="pop-up__close--calculation"></button>
     </section>
     <section class="pop-up--download">
-        <span class="pop-up__title--download">Завантажити каталог</span>
+        <h3 class="pop-up__title--download">Завантажити каталог</h3>
         <p class="pop-up__description--download">Заповніть форму, щоб почати завантаження каталогу</p>
-        <form class="pop-up__form--download" action="" method="POST">
+        <form class="pop-up__form--download" id="form-download" method="POST" enctype="multipart/form-data" onsubmit="send(event, '../../php/send-download.php', 'form-download')">
             <input class="pop-up__your-name-field--download" type="text" name="name--download" id="your-name--download" placeholder="Ваше ім'я" required>
             <input class="pop-up__your-telephone-field--download" type="tel" name="telephone--download" id="your-telephone--download" placeholder="+38 (___) ___ __ __" required>
             <span class="pop-up__interest--download">Що Вас цікавить?</span>
@@ -382,10 +389,11 @@
         <button class="pop-up__close--download"></button>
     </section>
     <div class="pop-up__overlay"></div>
-    <script src="../../src/pop-up.js"></script>
-    <script src="../../src/jquery-2.2.0.js"></script>
-    <script src="../../src/fotorama.dev.js"></script>
-    <script src="../../src/jquery.maskedinput.js"></script>
-    <script src="../../src/pop-input-mask.js"></script>
+    <script src="../../src/jquery-2.2.0.js" defer></script>
+    <script src="../../src/jquery.maskedinput.js" async></script>
+    <script src="../../src/fotorama.dev.js" async></script>
+    <script src="../../src/pop-up.js" async></script>
+    <script src="../../src/pop-input-mask.js" async></script>
+    <script src="../../src/send-mail-form.js" async></script>
 </body>
 </html>
