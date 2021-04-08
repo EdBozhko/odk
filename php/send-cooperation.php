@@ -11,9 +11,9 @@ $massage = $_POST['massage--cooperation'];
 // $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Новая заявка 'Співпраця'";
+$title = "Новая заявка $toggle 'Співпраця'";
 $body = "
-<h2>Новая заявка 'Співпраця'</h2>
+<h2>Новая заявка $toggle 'Співпраця'</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
 <b>Текст сообщения:</b> $massage

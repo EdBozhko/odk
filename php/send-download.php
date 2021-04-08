@@ -8,15 +8,17 @@ require './phpmailer/src/Exception.php';
 $name = $_POST['name--download'];
 $phone = $_POST['telephone--download'];
 $toggle = $_POST['pop-up-toggle--download'];
+$link = $_POST['link--download'];
 // $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Новая заявка 'Завантажити каталог'";
+$title = "Новая заявка $toggle 'Завантажити каталог'";
 $body = "
-<h2>Новая заявка 'Завантажити каталог'</h2>
+<h2>Новая заявка $toggle 'Завантажити каталог'</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
-<b>Что интересует:</b> $toggle
+<b>Что интересует:</b> $toggle<br>
+<b>Джерело:</b> $link
 ";
 
 // Настройки PHPMailer

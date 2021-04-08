@@ -8,15 +8,17 @@ require './phpmailer/src/Exception.php';
 $name = $_POST['name--calculation'];
 $phone = $_POST['telephone--calculation'];
 $toggle = $_POST['pop-up-toggle--calculation'];
+$link = $_POST['link--calculation'];
 // $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Новая заявка 'Розрахунок'";
+$title = "Новая заявка $toggle 'Розрахунок'";
 $body = "
-<h2>Новая заявка 'Розрахунок'</h2>
+<h2>Новая заявка $toggle 'Розрахунок'</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
-<b>Что интересует:</b> $toggle
+<b>Что интересует:</b> $toggle<br>
+<b>Джерело:</b> $link
 ";
 
 // Настройки PHPMailer

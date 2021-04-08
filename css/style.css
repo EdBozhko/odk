@@ -5255,15 +5255,16 @@ header {
     .pop-up__title--calculation,
     .pop-up__title--download {
         margin-top: 25px;
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 22px;
+        line-height: 26px;
     }
     
     .pop-up__description--callback,
     .pop-up__description--calculation,
     .pop-up__description--download {
-        font-size: 16px;
-        line-height: 18px;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 16px;
     }
     
     .pop-up__interest--callback,

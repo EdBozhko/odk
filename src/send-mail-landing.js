@@ -18,7 +18,7 @@ function send(event, php, id){
             if (json == null) {
                 // Если сообщение отправлено
                 // alert("Сообщение отправлено");
-                if (id === 'form-download') window.open('http://test1.odk.com.ua/catalog/catalog.pdf', '_blank');
+                if (id === 'form-download') window.open('http://www.odk.com.ua/catalog/catalog.pdf', '_blank');
                 form.reset();
                 popUpCallback.classList.remove("__active");
                 popUpCalculation.classList.remove("__active")

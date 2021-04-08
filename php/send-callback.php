@@ -8,15 +8,17 @@ require './phpmailer/src/Exception.php';
 $name = $_POST['name--callback'];
 $phone = $_POST['telephone--callback'];
 $toggle = $_POST['pop-up-toggle--callback'];
+$link = $_POST['link--callback'];
 // $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Новая заявка 'Передзвоніть мені'";
+$title = "Новая заявка $toggle 'Передзвоніть мені'";
 $body = "
-<h2>Новая заявка 'Передзвоніть мені'</h2>
+<h2>Новая заявка $toggle 'Передзвоніть мені'</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
-<b>Что интересует:</b> $toggle
+<b>Что интересует:</b> $toggle<br>
+<b>Джерело:</b> $link
 ";
 
 // Настройки PHPMailer
