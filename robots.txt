@@ -1,4 +1,9 @@
-User-agent: *Disallow:  
-Sitemap: /sitemap.xml
-
-
+User-agent: *
+Disallow:  
+Sitemap: https://odk.com.ua/sitemap.xml
+
+
+
+
+
+
